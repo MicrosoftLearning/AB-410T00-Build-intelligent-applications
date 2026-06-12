@@ -9,7 +9,7 @@ lab:
 
 # Create a Contoso customer portal with Power Pages
 
-In this exercise, you build an external-facing portal using Microsoft Power Pages that allows Contoso customers to submit new Work Orders and check the status of existing ones — without needing a Power Platform license.
+In this exercise, you build an external-facing portal using Microsoft Power Pages that allows Contoso customers to submit new Work Orders and check the status of existing ones without needing a Power Platform license.
 
 This exercise should take approximately **60** minutes to complete.
 
