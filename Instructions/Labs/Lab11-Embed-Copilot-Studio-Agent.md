@@ -227,10 +227,10 @@ The Plan Comparison agent can reason about table schemas and data, but a solutio
 1. Open [Power Apps](https://make.powerapps.com){:target="_blank"} and navigate to **Solutions**. Open the solution you created in Lab 2 with Plan Designer.
 
 1. Select **Objects** and spend 2–3 minutes browsing through the full component list. Look at each category:
-    - **Tables** — compare to what the agent told you about the plan's data model
-    - **Cloud flows** — did the plan generate any automation?
-    - **Apps** — what app structure did the plan suggest?
-    - **Security roles** — did the plan include any roles?
+    - **Tables:** compare to what the agent told you about the plan's data model
+    - **Cloud flows:** did the plan generate any automation?
+    - **Apps:** what app structure did the plan suggest?
+    - **Security roles:** did the plan include any roles?
 
 1. Review your notes from the Plan Comparison agent. Use these questions to guide your thinking:
     - Did your plan create a dedicated technician table? In the course labs, technician assignment was handled as a lookup field on the Work Order rather than a separate entity — did your plan do the same, or something different?
@@ -238,9 +238,9 @@ The Plan Comparison agent can reason about table schemas and data, but a solutio
     - Compare the columns on your plan's core service request table to the fields on your Work Order table. What concepts overlap? What's missing from one side?
 
 1. Based on what you saw in the solution and what the Plan Comparison agent returned, identify:
-    - **One thing that matched** — for example, did both solutions have a concept of a service request/work order and technician assignment?
-    - **One thing that diverged** — for example, the plan used a separate **Field Technician** table while you used a lookup field; or the plan used the **Account** entity while you used a plain text customer name field
-    - **One thing you added** — something meaningful you built that wasn't in the plan at all (for example: the escalation topic, security roles, the model-driven app dashboard, or the Copilot Studio agent itself)
+    - **One thing that matched** (for example, did both solutions have a concept of a service request/work order and technician assignment?)
+    - **One thing that diverged** (for example, the plan used a separate **Field Technician** table while you used a lookup field, or the plan used the **Account** entity while you used a plain text customer name field)
+    - **One thing you added** (something meaningful you built that wasn't in the plan at all, like the escalation topic, security roles, the model-driven app dashboard, or the Copilot Studio agent itself)
 
 1. Be prepared to share at least one of your findings with the class. Here are a few discussion points to get you started:
    - *"Did anyone's plan accurately predict the security role structure?"*
