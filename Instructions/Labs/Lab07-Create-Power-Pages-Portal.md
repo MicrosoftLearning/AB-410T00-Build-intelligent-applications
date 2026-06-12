@@ -286,6 +286,8 @@ You'll now run through the complete customer journey: submit a Work Order throug
     - **Customer Email**: `support@southridgevideo.com`
     - **Issue Description**: `Video editing workstation won't power on`
     - If prompted for a CAPTCHA, fill it out.
+  
+    > **Note**: You may see an error message saying that the **Customer Name** field won't display, and it may be omitted from the form. This is a known UI bug. If your **Customer Name** field is missing, fill out the other two fields and submit the form - the row will still be created. Afterwards, you can return to your model-driven app tab, select **Work Orders**, select the row with the empty name field and **support@southridgevideo.com** email address, and fill in the name there. 
 
 1. Submit the form and confirm the success message appears.
 
