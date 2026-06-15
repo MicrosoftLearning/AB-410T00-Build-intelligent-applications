@@ -42,11 +42,12 @@ Every table, app, flow, and automation you build will be part of this single sol
 
 You will be provided with a **Microsoft 365 license** by your Authorized Lab Host (ALH). This gives you a work email address in the format `username@domain.onmicrosoft.com`. You will use this account as your identity for all Power Platform services throughout the course.
 
-> **Note**: Do not use a personal Microsoft account for these labs. The Microsoft 365 account provided by your ALH includes the organizational permissions required to create Dataverse environments and access Power Platform features.
+> [!NOTE]
+> Do not use a personal Microsoft account for these labs. The Microsoft 365 account provided by your ALH includes the organizational permissions required to create Dataverse environments and access Power Platform features.
 
 ## Task 1: Sign in to Power Apps and start your trial
 
-1. Open a browser and go to [Power Apps](https://make.powerapps.com){:target="_blank"} at `https://make.powerapps.com`.
+1. Open a browser and go to [**Power Apps**](https://make.powerapps.com) at `https://make.powerapps.com`.
 
 1. Sign in using the Microsoft 365 credentials provided by your Authorized Lab Host.
 
@@ -60,11 +61,12 @@ You will be provided with a **Microsoft 365 license** by your Authorized Lab Hos
 
 1. Confirm that the environment picker in the top-right corner now shows **Dev One**. This is the environment you will use throughout all labs in this course.
 
-    > **Note**: Dev One includes Microsoft Dataverse, which is required for all labs in this course. If you don't see Dev One in the environment list, let your instructor know.
+   > [!NOTE]
+   > Dev One includes Microsoft Dataverse, which is required for all labs in this course. If you don't see Dev One in the environment list, let your instructor know.
 
 ## Task 2: Verify your Power Automate access
 
-1. Open a new browser tab and go to [Power Automate](https://make.powerautomate.com){:target="_blank"} at `https://make.powerautomate.com`.
+1. Open a new browser tab and go to [**Power Automate**](https://make.powerautomate.com) at `https://make.powerautomate.com`.
 
 1. Sign in with the same Microsoft 365 credentials.
 
@@ -72,13 +74,14 @@ You will be provided with a **Microsoft 365 license** by your Authorized Lab Hos
 
 1. In the left navigation, select **+ Create**. Confirm you can see **Automated cloud flow** as an option.
 
-    > **Note**: Labs 8 and 9 use the Dataverse connector in Power Automate, which is a premium connector. Your Power Apps trial includes premium Power Automate capabilities. If you see a message about upgrading your plan when building flows, let your instructor know.
+   > [!NOTE]
+   > Labs 8 and 9 use the Dataverse connector in Power Automate, which is a premium connector. Your Power Apps trial includes premium Power Automate capabilities. If you see a message about upgrading your plan when building flows, let your instructor know.
 
 ## Task 3: Start your Power Pages trial
 
 Power Pages is a separate product from Power Apps and requires its own trial activation. You will need this for Lab 7 (Day 3).
 
-1. Open a new browser tab and go to [Power Pages](https://make.powerpages.microsoft.com){:target="_blank"} at `https://make.powerpages.microsoft.com`.
+1. Open a new browser tab and go to [**Power Pages**](https://make.powerpages.microsoft.com) at `https://make.powerpages.microsoft.com`.
 
 1. Sign in with the same Microsoft 365 credentials.
 
@@ -86,21 +89,23 @@ Power Pages is a separate product from Power Apps and requires its own trial act
 
 1. Confirm that the Power Pages home screen loads and shows the option to create a new site.
 
-    > **Note**: You don't need to create a site now — just confirm that your trial is active. You'll build the Contoso customer portal in Lab 7.
+   > [!NOTE]
+   > You don't need to create a site now — just confirm that your trial is active. You'll build the Contoso customer portal in Lab 7.
 
 ## Task 4: Verify AI Builder access
 
 AI Builder is used in Lab 10 to create a grounded prompt that queries Contoso's service history. AI Builder requires credits, which are included with your Power Platform trial.
 
-1. Return to [Power Apps](https://make.powerapps.com){:target="_blank"}.
+1. Return to [Power Apps](https://make.powerapps.com) at `https://make.powerapps.com` and confirm you are in the **Dev One** environment.
 
 1. In the left navigation, select **AI hub**.
 
-1. Confirm that the AI hub loads and you can see options for **Prompts**, **Models**, and other AI Builder features.
+1. Confirm that the AI hub loads and you can see options for **Prompts**, **AIModels**, and other AI Builder features.
 
 1. If you see a message about AI Builder credits or a prompt to start a trial, select **Try AI Builder** or **Start trial** to activate your AI Builder credits.
 
-    > **Note**: AI Builder credits are consumed each time a prompt is run or a model is used. Use the **Test** feature thoughtfully during Lab 10 to avoid depleting your trial credits before completing the exercise.
+   > [!NOTE]
+   > AI Builder credits are consumed each time a prompt is run or a model is used. Use the **Test** feature thoughtfully during Lab 10 to avoid depleting your trial credits before completing the exercise.
 
 ## You're ready
 
