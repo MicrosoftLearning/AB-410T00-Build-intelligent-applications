@@ -21,15 +21,15 @@ You've been asked to design an AI-first Power Platform solution that addresses t
 
 ## Task 1: Describe the business problem to Plans
 
-1. Open [Power Apps](https://make.powerapps.com){:target="_blank"} at `https://make.powerapps.com` and sign in with your Microsoft account.
+1. Open [**Power Apps**](https://make.powerapps.com) at `https://make.powerapps.com` and sign in with your Microsoft account.
 
 1. Ensure you are in the correct environment. Select the environment picker in the top-right corner and confirm or select your training environment.
 
 1. Select **Plans** in the left navigation. 
 
-1. Select **Create a plan.**
+1. Select **Create a plan**.
 
-1. In the description box, enter the following:
+1. In the description box, enter the following description of the business problem:
 
     ```
     Contoso Field Services needs to manage service requests from business customers whose industrial equipment has failed. When a customer reports an issue, a service request should be created. Service requests should have a priority field — Low, Normal, High, and Critical. A service manager needs to view and prioritize all open requests and assign a technician. Requests marked Critical should automatically trigger a manager approval before a technician is assigned. The assigned technician needs a mobile app to view their jobs and update the status. Customers should be able to submit new requests and check the status of existing ones online. When a request is submitted, the assigned technician should receive a notification automatically.
@@ -45,13 +45,14 @@ You've been asked to design an AI-first Power Platform solution that addresses t
 
 1. Review the **Processes** section. The Process Agent surfaces the key business processes it identified, such as submitting a service request, assigning a technician, and routing Critical requests for approval. Confirm that the main workflows from your description are represented. You can select **View process** to view a branching flow chart of the business process.
 
-1. If everything looks correct, select **Looks good.**
+1. If everything looks correct, select **Looks good**.
 
 1. Review the **Data** section. Note which tables Plans suggests (for example, Service Requests, Customers, Technicians). When you're satisfied, select **Looks good.**
 
 1. Review the **Technology** section. This combines apps, automations, and pages into a single view. Confirm that you see references to a canvas app for technicians, a model-driven app for managers, flows for notifications and approvals, and a Power Pages site for external customers. When you're satisfied, select **Looks good.**
 
-    > **Note**: Plans uses your description to suggest solution components — the exact output may vary. What matters is the overall shape of the solution: data → apps → automation → portal. This is the same structure you'll build across Labs 3 through 10.
+   > [!NOTE] 
+   > Plans uses your description to suggest solution components — the exact output may vary. What matters is the overall shape of the solution: data → apps → automation → portal. This is the same structure you'll build across Labs 3 through 10.
 
 ## Task 3: Review the blueprint as your build guide
 
@@ -71,4 +72,5 @@ Take a few minutes to review the full blueprint and connect it to the exercises 
 
 1. Note where AI-generated responses from your Dataverse data could add value for agents — you'll build this in Lab 10.
 
-    > **Note**: We won't build on these tables and objects at the moment. Plans was a design tool — it helped you understand *what* to build and *why*. In the remaining labs, you'll build each component yourself from scratch, so you understand exactly how everything works. You'll start by creating a new solution in Lab 3.
+   > [!NOTE] 
+   > We won't build on these tables and objects at the moment. Plans was a design tool — it helped you understand *what* to build and *why*. In the remaining labs, you'll build each component yourself from scratch, so you understand exactly how everything works. You'll start by creating a new solution in Lab 3.
