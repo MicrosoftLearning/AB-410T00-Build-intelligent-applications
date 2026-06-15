@@ -23,7 +23,11 @@ Agents currently answer these questions manually, searching through documentatio
 
 First, you write a simple prompt and observe how specificity affects the quality of the response.
 
-1. Open [Microsoft Copilot](https://copilot.microsoft.com){:target="_blank"} at `https://copilot.microsoft.com` and sign in with your Microsoft account.
+1. Open [**Microsoft Copilot**](https://copilot.microsoft.com) at `https://copilot.microsoft.com` and sign in with your Microsoft account.
+
+1. Select your **Work** account if prompted.
+
+1. Close any welcome messages that appear.
 
 1. In the chat box, enter the following prompt and press **Enter**:
 
@@ -37,7 +41,8 @@ First, you write a simple prompt and observe how specificity affects the quality
 
 1. Compare the two responses. Note how adding the company name, the product type, the audience (service agent), and the situation (waiting for a technician) produces a significantly more useful answer.
 
-    > **Note**: The quality of an AI response is directly shaped by the quality of the prompt. Specificity is the most immediate way to improve output.
+   > [!NOTE]
+   > The quality of an AI response is directly shaped by the quality of the prompt. Specificity is the most immediate way to improve output.
 
 ## Task 2: Set a persona and context
 
@@ -83,7 +88,8 @@ Now you practice controlling the length, format, and audience of the response.
 
 1. Modify the prompt once more to request the response be written for a **non-technical customer** who is unfamiliar with equipment terminology.
 
-    > **Note**: Adding constraints — length, format, tone, and audience — helps ensure AI output is ready to use in a real business context, not just technically accurate.
+   > [!NOTE]
+   > Adding constraints — length, format, tone, and audience — helps ensure AI output is ready to use in a real business context, not just technically accurate.
 
 ## Task 4: Use few-shot examples
 
@@ -110,7 +116,8 @@ Few-shot prompting gives the AI examples of the style and format you want before
 
 1. Replace the final customer message with a different scenario of your choosing and resubmit. Observe how the AI applies the same style to the new situation.
 
-    > **Note**: Few-shot prompting is especially useful when you need consistent output across many interactions — for example, when building a Copilot Studio topic or an AI Builder prompt action that many agents will use.
+   > [!NOTE]
+   > Few-shot prompting is especially useful when you need consistent output across many interactions — for example, when building a Copilot Studio topic or an AI Builder prompt action that many agents will use.
 
 ## Summary
 
