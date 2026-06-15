@@ -26,7 +26,7 @@ You'll create a Dataverse security role for each user type and configure the app
 
 Security roles in Dataverse control what records each user can read, create, update, and delete. You configure privileges per table, and you can scope each privilege to the user's own records, their business unit, or the entire organization.
 
-1. Open a new tab and navigate to the [Power Platform Admin Center](https://admin.powerplatform.microsoft.com){:target="_blank"} at `https://admin.powerplatform.microsoft.com`.
+1. Open a new tab and navigate to the [**Power Platform Admin Center**](https://admin.powerplatform.microsoft.com) at `https://admin.powerplatform.microsoft.com`.
 
 1. In the left navigation, select **Manage**, then select **Environments**.
 
@@ -82,7 +82,7 @@ Security roles in Dataverse control what records each user can read, create, upd
 
 1. Select **Save**.
 
-1. In the **Search** box, enter `Work Order` to find the table. Select the **`contoso_workorder`** table.
+1. In the **Search** box, enter `Work Order` to find the table. Select the **Work Order** (contoso_workorder) table.
 
 1. Set the following permissions:
     - **Create**: Organization (the manager can create new Work Orders)
@@ -94,9 +94,10 @@ Security roles in Dataverse control what records each user can read, create, upd
     - **Assign**: Organization (the manager can assign Work Orders to technicians)
     - **Share**: Organization (the manager can share records with others)
 
-1. Select **Save and close** from the command bar.
+1. Select **Save + close** from the command bar.
 
-    > **Note**: The **Organization** scope means the user can access all records in the environment, regardless of who created or owns them. The **User** scope limits access to records the user owns or has been explicitly shared with them.
+   > [!NOTE]
+   > The **Organization** scope means the user can access all records in the environment, regardless of who created or owns them. The **User** scope limits access to records the user owns or has been explicitly shared with them.
 
 ## Verify your work
 
