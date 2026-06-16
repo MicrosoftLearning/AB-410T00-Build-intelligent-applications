@@ -313,7 +313,7 @@ You'll now run through the complete customer journey: submit a Work Order throug
 1. Submit the form and confirm the success message appears.
 
 1. Select the **Request Status** from the site navigation menu. Find the Southridge Video Work Order in the queue and confirm:
-    - The **Work Order Number** generated and is in a WO- format
+    - The **Work Order Number** is generated and is in a WO- format
     - The **Request Status** shows **New**
     - The **Estimated Resolution** date is visible
 
