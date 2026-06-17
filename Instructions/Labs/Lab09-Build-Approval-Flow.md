@@ -21,7 +21,7 @@ You'll build an approval flow that triggers when a Work Order's priority is set 
 
 ## Task 1: Create the approval flow
 
-1. Open [Power Automate](https://make.powerautomate.com) at `https://make.powerautomate.com` and sign in with your Microsoft account.
+1. Open [**Power Automate**](https://make.powerautomate.com) at `https://make.powerautomate.com` and sign in with your Microsoft account.
 
 1. Confirm you are in your training environment.
 
@@ -37,15 +37,16 @@ You'll build an approval flow that triggers when a Work Order's priority is set 
 
 Before building the condition, you need to find the integer value that Dataverse stores for **Critical** priority. Power Automate receives this integer when the trigger fires, not the display label.
 
-1. Open a new browser tab and go to [Power Apps](https://make.powerapps.com) at `https://make.powerapps.com`. Ensure you are in your **Dev One** environment.
+1. Open a new browser tab and go to [**Power Apps**](https://make.powerapps.com) at `https://make.powerapps.com`. Ensure you are in your **Dev One** environment.
 
 1. In the left navigation, select **Tables** and open the **Work Order** table.
 
-1. Select the **Columns** tab and open the **Priority** column.
+1. Under **Schema**, select **Columns** and open the **Priority** column.
 
 1. In the **Choices** section, find the **Critical** option and note the **Value** shown next to it. Write this number down — you'll use it in the next task.
 
-    > **Note**: Every choice option in Dataverse has a hidden integer value behind its display label. This number is what gets stored in the database and passed to flows, reports, and integrations. Understanding this helps you debug conditions and filters that compare against choice fields.
+   > [!NOTE]
+   > Every choice option in Dataverse has a hidden integer value behind its display label. This number is what gets stored in the database and passed to flows, reports, and integrations. Understanding this helps you debug conditions and filters that compare against choice fields.
 
 1. Close this tab and return to Power Automate.
 
@@ -61,7 +62,8 @@ Before building the condition, you need to find the integer value that Dataverse
     - **Operator**: is equal to
     - **Value** (right): The integer value you noted in Task 2 (the number may have appeared with commas in the text box, but don't include commas)
 
-    > **Note**: Dataverse stores choice column selections as integers, not text labels. Power Automate receives the integer value when the trigger fires, so your condition must match it exactly.
+   > [!NOTE]
+   > Dataverse stores choice column selections as integers, not text labels. Power Automate receives the integer value when the trigger fires, so your condition must match it exactly.
 
 ## Task 4: Add the approval action
 
@@ -87,8 +89,8 @@ Before building the condition, you need to find the integer value that Dataverse
         Please approve to proceed with technician assignment, or reject to return the request to High priority.
         ```
 
-    - **Item link**: Leave blank for now
-    - **Item link description**: Leave blank for now
+    - **Item link customer**: Replace `[Customer Name]` with the **Customer Name** dynamic content.
+    - **Item link issue**: Replace `[Issue Description]` with the **Issue Description** dynamic content.
 
 1. Select **Save**.
 
@@ -97,7 +99,7 @@ Before building the condition, you need to find the integer value that Dataverse
 Now you'll add actions for both the approved and rejected paths.
 
 1. Below the **Start and wait for an approval** step, add a new **Condition**:
-    - **Value** (left): Dynamic content **Outcome** from the approval step
+    - **Value** (left): Dynamic content **Outcome** from the **Start and wait for an approval** step
     - **Operator**: is equal to
     - **Value** (right): `Approve`
 
@@ -105,12 +107,13 @@ Now you'll add actions for both the approved and rejected paths.
 
 1. In the **True** branch, select the plus sign and add an action: **Update a row** (Microsoft Dataverse).
 
-1. Configure the update:
+1. Configure the update a row action:
     - **Table name**: Work Orders
     - **Row ID**: Type `/` and select **Insert dynamic content**. Search for and select **Work Order** with the description **Unique Identifier for entity instances**.
     - **Request Status**: `Assigned`
 
-    > **Note**: This signals that the request has been approved and is ready for technician assignment. A more complete solution would also include a step to notify the manager's team that assignment can proceed.
+   > [!NOTE] 
+   > This signals that the request has been approved and is ready for technician assignment. A more complete solution would also include a step to notify the manager's team that assignment can proceed.
 
 ### If rejected
 
@@ -127,15 +130,17 @@ Now you'll add actions for both the approved and rejected paths.
     - **Subject**: `Critical Request Rejected: ` + **Customer Name** dynamic content
     - **Body**: `The Critical priority request for [Customer Name] was not approved. The priority has been reset to High and the request is back in the New status for review.`
 
+    Replace `[Customer Name]` with the **Customer Name** dynamic content.
+
 1. Select **Save**.
 
 ## Task 6: Test the approval flow
 
 1. Select **Test** > **Manually** > **Test**.
 
-1. Open a new browser tab and go to [Power Apps](https://make.powerapps.com) at `https://make.powerapps.com`. Ensure you are in your **Dev One** environment.
+1. Open a new browser tab and go to [**Power Apps**](https://make.powerapps.com) at `https://make.powerapps.com`. Ensure you are in your **Dev One** environment.
 
-1. Open the **Contoso Service Management** model-driven app. Select **Work orders** to navigate to the Work Orders page and select **+New** to create a new Work Order using the form:
+1. Open the **Contoso Service Management** model-driven app. Select **Work orders** to navigate to the Work Orders page and select **+ New** to create a new Work Order using the form:
     - **Customer Name**: `Northwind Traders`
     - **Issue Description**: `Complete electrical failure across production floor`
     - **Priority**: `Critical`
@@ -151,4 +156,5 @@ Now you'll add actions for both the approved and rejected paths.
 
 1. In Power Apps, verify that the **Request Status** of the Work Order has been updated to `Assigned`. (You can refresh the form if you don't see it update immediately.)
 
-    > **Note**: Approval flows pause execution and wait indefinitely for a response. In production, you would typically add a timeout action (using **Run after** settings or a parallel branch with a delay) to handle requests that are never responded to.
+   > [!NOTE]
+   > Approval flows pause execution and wait indefinitely for a response. In production, you would typically add a timeout action (using **Run after** settings or a parallel branch with a delay) to handle requests that are never responded to.
