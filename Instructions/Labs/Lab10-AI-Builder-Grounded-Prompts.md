@@ -26,13 +26,14 @@ Both patterns are useful in different situations. The standalone prompt is flexi
 
 ## Task 1: Open AI Builder and create a new prompt
 
-1. Open [Power Apps](https://make.powerapps.com) at `https://make.powerapps.com` and sign in with your Microsoft account.
+1. Open [**Power Apps**](https://make.powerapps.com) at `https://make.powerapps.com` and sign in with your Microsoft account.
 
 1. Confirm you are in your training environment.
 
 1. In the left navigation, select **AI hub**.
 
-    > **Note**: If you don't see **AI hub**, look for **AI Builder** in the left navigation instead. The entry point may vary depending on your environment.
+   > [!NOTE]
+   > If you don't see **AI hub**, look for **AI Builder** in the left navigation instead. The entry point may vary depending on your environment.
 
 1. Select **Prompts** from the AI hub menu.
 
@@ -60,11 +61,11 @@ The prompt instruction tells the AI what it should do and how it should behave. 
 
 Grounding the prompt in Dataverse data means the AI will base its answers on actual records, not just general knowledge.
 
-1. In the prompt editor, select **+Add content**.
+1. In the prompt editor, select **+ Add content**.
 
 1. Select **Dataverse** as the data source type.
 
-1. Search for and select the **Work Orders** table.
+1. Search for and select the **Work Order** table.
 
 1. Configure which columns the AI can use. Select the following fields:
     - Customer Name
@@ -73,9 +74,10 @@ Grounding the prompt in Dataverse data means the AI will base its answers on act
     - Request Status
     - Resolved Date
 
-1. Select **Add.**
+1. Select **Add**.
 
-    > **Note**: Grounding limits the AI's responses to information from your selected data source. This is critical for accuracy in business scenarios — you want the AI to answer based on Contoso's actual data, not make up plausible-sounding answers.
+   > [!NOTE]
+   >  Grounding limits the AI's responses to information from your selected data source. This is critical for accuracy in business scenarios — you want the AI to answer based on Contoso's actual data, not make up plausible-sounding answers.
 
 ## Task 4: Add an input variable
 
@@ -93,38 +95,41 @@ Input variables let you pass dynamic values into the prompt at runtime — for e
 
     `Focus your response on Work Orders for the customer named: {CustomerName}`
 
-    > **Note**: The input variable appears as a pill in the instructions panel but is referenced as `{CustomerName}` in the prompt text. At runtime, the value entered by the user replaces this placeholder.
+   > [!NOTE]
+   > The input variable appears as a pill in the instructions panel but is referenced as `{CustomerName}` in the prompt text. At runtime, the value entered by the user replaces this placeholder.
 
 1. Select **Save**.
 
 ## Task 5: Test the prompt
 
-1. In the prompt editor, select **Test.**
+1. In the prompt editor, select **Test**.
 
 1. Review the response. The AI should reference any Work Order records linked to Fabrikam Industries and summarize the relevant history.
 
 1. Test with another customer name by selecting the **CustomerName** input pill, changing the sample data to `Northwind Traders`, and selecting **Test** again.
 
-    > **Note**: The quality of grounded responses depends on how much data exists in the table. In a production environment with hundreds of records, the AI's responses become significantly more useful.
+   > [!NOTE]
+   > The quality of grounded responses depends on how much data exists in the table. In a production environment with hundreds of records, the AI's responses become significantly more useful.
 
 ## Task 6: Configure a row summary for the Work Order table
 
 The standalone prompt you built in Tasks 1–5 is interactive — an agent runs it on demand and asks questions. Now you'll configure a **row summary** for the Work Order table. A row summary tells Copilot in model-driven apps which fields to use when generating an AI-powered summary of a record, shown automatically when an agent opens a Work Order.
 
-1. Open [Power Apps](https://make.powerapps.com) at `https://make.powerapps.com` and navigate to **Tables** > **Work Order**.
+1. Open [**Power Apps**](https://make.powerapps.com) at `https://make.powerapps.com` and navigate to **Tables** > **Work Order**.
 
 1. Select **Row summary** in the Customizations section.
 
 1. In **Row summary,** a prompt will open. It will say *Summarize Work Order with*.
 
-1. Place your cursor after *with* and select **+Add data**. Add the following fields as Knowledge:
+1. Place your cursor after *with* and select **+ Add data**. Select **Work Order** and add the following fields as Knowledge:
     - Customer Name
     - Issue Description
     - Priority
     - Request Status
     - Resolved Date
 
-    > **Note**: The row summary uses these fields to generate a concise AI summary whenever Copilot summarizes a Work Order record. Unlike a prompt column, it does not store text on the record — the summary is generated on demand when an agent views the record.
+   > [!NOTE]
+   > The row summary uses these fields to generate a concise AI summary whenever Copilot summarizes a Work Order record. Unlike a prompt column, it does not store text on the record — the summary is generated on demand when an agent views the record.
 
 1. Select **Test**.
 
@@ -134,6 +139,6 @@ The standalone prompt you built in Tasks 1–5 is interactive — an agent runs 
 
 1. Open the **Contoso Service Management** model-driven app.
 
-1. Navigate to a **Work Order** record that has values in the Customer Name, Issue Description, Priority, and Request Status fields.
+1. Navigate to a **Work Order** record that has values in the **Customer Name**, **Issue Description**, **Priority**, and **Request Status** fields.
 
 1. Copilot displays an AI-generated summary of the record based on the columns you configured. The summary updates each time you open a record with no manual action required from the agent.
