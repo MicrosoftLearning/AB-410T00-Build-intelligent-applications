@@ -21,15 +21,17 @@ You'll build this app connected to the Work Order table you created in Lab 3, wi
 
 ## Task 1: Create the canvas app
 
-1. Open [Power Apps](https://make.powerapps.com){:target="_blank"} at `https://make.powerapps.com` and sign in with your Microsoft account.
+1. Open [**Power Apps**](https://make.powerapps.com) at `https://make.powerapps.com` and sign in with your Microsoft account.
 
 1. Confirm you are in your **Dev One** environment.
 
 1. In the left navigation, select **+ Create**.
 
-1. Select **Create from blank** and select **Phone** as the size.
+1. Select **Create from blank** and select **Phone size**.
 
-1. Select the **gear** icon in the bottom left corner. Configure the **App name** as `Contoso Technician App`.
+1. Skip any welcome messages that appear.
+
+1. Select the **gear** icon in the bottom left corner. Configure the **App name** as `Contoso Technician App`, then select **Close**.
 
 ## Task 2: Connect to the Work Order table
 
@@ -49,26 +51,28 @@ Now you'll set up the main screen to display a gallery of Work Orders.
 
 1. Rename the default screen from **Screen1** to `ListScreen` by double-clicking its name in the tree view panel.
 
-1. On **ListScreen**, select **Insert** from the top menu, then select **Vertical gallery**.
+1. On **ListScreen**, select **+ Insert** from the top menu, then select **Vertical gallery**.
 
 1. When prompted to connect a data source, select **Work Orders**.
 
 1. Resize and reposition the gallery to fill the screen, leaving space for a title bar at the top.
 
-    > **Note**: Once the gallery is connected to Work Orders, you should see the three sample records you created in Lab 3 (Adatum Corporation, Tailwind Traders, Fabrikam Inc) appear in the gallery. If the gallery is empty, confirm that you selected the correct Work Orders table with the **contoso_** prefix.
+   > [!NOTE]
+   > Once the gallery is connected to Work Orders, you should see the three sample records you created in Lab 3 (Adatum Corporation, Tailwind Traders, Fabrikam Inc) appear in the gallery. If the gallery is empty, confirm that you selected the correct Work Orders table with the **contoso_** prefix.
 
 1. With the gallery selected, a small popup appears pinned just above the gallery. Select **Layout** in that popup and choose the layout that shows **Title, subtitle, and body**.
 
-1. Select **Fields** in the properties panel. The fields are shown using their schema names. Select the schema name next to each field to open the dropdown and choose the correct field:
+1. In the properties panel, select the **Fields** count (for example, 7 selected) to open the field list. The fields are shown using their schema names. Select the schema name next to each field to open the dropdown and choose the correct field:
     - **Body**: select `contoso_status`
     - **Subtitle**: select `contoso_issuedescription`
     - **Title**: select `customername`
 
-1. Select **Insert** > **Text** to add a title bar at the top of the screen.
+1. Select **+ Insert** > **Text label** to add a title bar at the top of the screen.
 
 1. Set the label **Text** property to `"My Work Orders"` in the formula bar.
 
-    > **Note**: The double quotes are required. Power Apps treats everything in the formula bar as an expression, not plain text. Without quotes, it tries to interpret `My Work Orders` as a formula reference and throws an error. Wrapping the value in double quotes tells Power Apps to treat it as a literal text string.
+   > [!NOTE]
+   > The double quotes are required. Power Apps treats everything in the formula bar as an expression, not plain text. Without quotes, it tries to interpret `My Work Orders` as a formula reference and throws an error. Wrapping the value in double quotes tells Power Apps to treat it as a literal text string.
 
 1. Format the label: set the **Background color** to a dark blue, the **Color** (text) to white, and increase the **FontSize** to `36`.
 
@@ -82,7 +86,7 @@ Now you'll add a second screen where technicians can view full details and updat
 
 1. Rename the new screen to `DetailScreen` by double-clicking its name in the screens panel.
 
-1. On **DetailScreen**, select **Insert** > **Form**.
+1. On **DetailScreen**, select **+ Insert** > **Edit form**.
 
 1. When prompted to connect a data source, select **Work Orders**.
 
@@ -100,7 +104,7 @@ Now you'll add a second screen where technicians can view full details and updat
 
 Now you'll add Back and Save buttons so technicians can navigate and submit updates.
 
-1. Add a **Back** button at the top of the screen by selecting **Insert** > **Button**.
+1. Add a **Back** button at the top of the screen by selecting **+ Insert** > **Button**.
 
 1. When the button is inserted, notice the formula bar at the top of the screen. The property dropdown on the left side already shows **OnSelect** by default.
 
@@ -108,11 +112,12 @@ Now you'll add Back and Save buttons so technicians can navigate and submit upda
 
 1. Select the **Copilot** icon in the formula bar and select **Create a formula (preview)**. This button will navigate back to the previous screen, so type `go back to the previous screen` and press **Enter**. Copilot suggests the formula `Back()`. Select **Apply** to apply it.
 
-    > **Note**: If Copilot isn't available in your environment, or gives you a response you didn't expect, you can type `Back()` directly in the formula bar.
+   > [!NOTE]
+   > If Copilot isn't available in your environment, or gives you a response you didn't expect, you can type `Back()` directly in the formula bar.
 
 1. Now set the button label: select the property dropdown and choose **Text**. Type `"Back"` in the formula bar.
 
-1. Add a **Save** button below the form by selecting **Insert** > **Button**.
+1. Add a **Save** button below the form by selecting **+ Insert** > **Button**.
 
 1. With the Save button selected, confirm the property dropdown shows **OnSelect**, then type `SubmitForm(Form1)` in the formula bar (replace `Form1` with the actual name of your edit form if different).
 
@@ -141,7 +146,7 @@ Now you'll connect the gallery on the first screen to the detail screen.
 
 1. Review the formula Copilot suggests. It should be:
 
-    `Navigate(DetailScreen, ScreenTransition.Slide)`
+    `Navigate(DetailScreen, ScreenTransition.Cover)`
 
     If Copilot's suggestion matches, select **Apply**. If it doesn't match exactly, select **Discard**, then type the formula above directly in the formula bar.
 
@@ -159,30 +164,32 @@ Now you'll connect the gallery on the first screen to the detail screen.
 
 Now you'll build a Power Automate flow that uses an AI Builder prompt to analyze an issue description and suggest a priority level.
 
-1. On **DetailScreen**, select **Insert** > **Button** and place it below the form, above the **Save** button.
+1. On **DetailScreen**, select **+ Insert** > **Button** and place it below the form, above the **Save** button.
 
 1. With the button selected, select the **ellipsis (...)** at the bottom of the left panel to reveal more options, then select **Power Automate**.
 
-1. Select **Create new flow**. A Power Automate flow designer opens in a panel within the canvas app studio, with a pre-configured Power Apps trigger already in place.
+1. Select **Create new flow**, then select **+ Create from blank**. A Power Automate flow designer opens in a panel within the canvas app studio, with a pre-configured Power Apps trigger already in place.
 
 1. Select the default flow name at the top of the panel and rename it to `SuggestPriorityFlow`.
 
-1. Select the trigger step to expand it and select **+Add an input.**
+1. Select the trigger step to expand it and select **+ Add an input.**
 
 1. Add a text input named `IssueDescription`.
 
-1. Add a new step: search for **AI Builder** and select **AI Classify**.
+1. Add a new step: search for **AI Builder** and select **Run a prompt**.
 
-    > **Note**: You may be prompted to authenticate or sign in to AI Builder at this point. Follow the on-screen steps to connect, then continue.
+   > [!NOTE]
+   > You may be prompted to authenticate or sign in to AI Builder at this point. Follow the on-screen steps to connect, then continue.
 
-1. Configure the **AI Classify** step with the following values:
+1. Configure the **Run a prompt** step with the following values:
+    - **Prompt**: select **AI Classify** from the dropdown
     - **Input text**: select the **Input** from the PowerApps connector in the dynamic value selector (this is the IssueDescription we set up in a previous step)
     - **Input Categories**: `Low, Normal, High, Critical`
     - **AdditionalContext**: `You are classifying the urgency of a field Work Order. Choose the priority level that best matches the issue described.`
 
-1. Select **New step.**
+1. Select **+ New step**.
 
-1. Add a **Respond to a PowerApp or flow** step. Select **+ Add an output**, choose **Text**, name it `SuggestedPriority`, and set its value to the **Text** output from the AI Classify step.
+1. Add a **Respond to a Power App or flow** step. Select **+ Add an output**, choose **Text**, name it `SuggestedPriority`, and set its value to the **Text** output from the **Run a prompt** step.
 
 1. **Save** the flow and return to the canvas app.
 
@@ -220,18 +227,20 @@ Now you'll wire the flow to the canvas app and display the AI suggestion on scre
 
 1. On the detail screen, select **Suggest Priority**. After a few seconds, the label should display a suggested priority based on the issue description.
 
-    > **Note**: AI Builder prompt actions require an AI Builder capacity allocation in your environment. If the flow fails with a licensing error, check with your administrator or use a trial capacity add-on. Results may vary — the AI suggestion is a starting point, not a definitive answer.
+   > [!NOTE]
+   > AI Builder prompt actions require an AI Builder capacity allocation in your environment. If the flow fails with a licensing error, check with your administrator or use a trial capacity add-on. Results may vary — the AI suggestion is a starting point, not a definitive answer.
 
-1. Change the **Request Status** value and select **Save**. 
+1. Change the **Request Status** value and select **Save**.
 
 1. Select **Back** to return to the list and confirm your change was saved.
 
-1. Press **Escape** to exit preview mode.
+1. Press **Esc** or select the **X** to exit preview mode.
 
 ## Task 10: Save and publish the app
 
-1. Select **File** > **Save** (or press **Ctrl+S**).
+1. Select the **Save** icon on the top-right corner (or press **Ctrl+S**).
 
 1. Select **Publish** and then **Publish this version** to make the app available to users.
 
-    > **Note**: Sharing the app with specific users and assigning security roles is covered in a separate module. For now, the app is published and accessible in your environment.
+   > [!NOTE]
+   > Sharing the app with specific users and assigning security roles is covered in a separate module. For now, the app is published and accessible in your environment.
