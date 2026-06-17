@@ -23,7 +23,7 @@ In this exercise, you build a custom Copilot Studio agent grounded in the Work O
 
 You'll create the agent from inside the model-driven app's designer. This approach opens Copilot Studio already scoped to your environment, avoiding the sign-in and loading issues that can occur when navigating to Copilot Studio directly.
 
-1. Open [Power Apps](https://make.powerapps.com){:target="_blank"} at `https://make.powerapps.com` and sign in with your Microsoft account.
+1. Open [**Power Apps**](https://make.powerapps.com) at `https://make.powerapps.com` and sign in with your Microsoft account.
 
 1. Confirm you are in your **Dev One** environment.
 
@@ -33,11 +33,13 @@ You'll create the agent from inside the model-driven app's designer. This approa
 
 1. In the app designer, select the **Agents** tab in the left navigation pane.
 
-1. Select **Create agent**. Copilot Studio opens in a new browser tab, already scoped to your Dev One environment.
+1. Select **+ Create agent**. Copilot Studio opens in a new browser tab, already scoped to your Dev One environment.
 
 1. You may be prompted to **Start a trial** when Copilot Studio opens. Select it to proceed. You may also be prompted to sign in with your email address. Follow the prompts to complete sign-in before continuing.
 
 ## Task 2: Configure the agent in Copilot Studio
+
+1. In Copilot Studio, skip any welcome messages that appear.
 
 1. Confirm you are in the **Dev One** environment.
 
@@ -47,9 +49,9 @@ You'll create the agent from inside the model-driven app's designer. This approa
     An AI assistant for Contoso service managers. Answers questions about Work Orders, technician assignments, and resolution status using live Dataverse data.
     ```
 
-1. Select the arrow to submit. Copilot Studio generates a name, description, and instructions for the agent and opens the **Overview** page.
+1. Select the arrow or press Enter to submit. Copilot Studio generates a name, description, and instructions for the agent and opens the **Overview** page.
 
-1. Review the generated values. Update the **Name** to `Contoso Service Assistant`. The description and instructions don't have to be exact, but they should roughly match the following:
+1. Review the generated values. Under the **Details** section, select **Edit** and update the **Name** to `Contoso Service Assistant`. The description and instructions don't have to be exact, but they should roughly match the following:
     - **Name**: `Contoso Service Assistant`
     - **Description**: `An AI assistant for Contoso service managers. Answers questions about Work Orders, technician assignments, and resolution status using live Dataverse data.`
     - **Instructions**:
@@ -58,13 +60,16 @@ You'll create the agent from inside the model-driven app's designer. This approa
         You are a service management assistant for Contoso Field Services. You help service managers find information about open Work Orders, technician workloads, and customer histories. Always be concise and professional. When referencing Work Orders, include the customer name, priority, and current status. If you can't find the information requested, say so clearly and suggest how the manager might find it themselves.
         ```
 
+1. Select **Save** in each section to save your changes.
+
 ## Task 3: Ground the agent on the Work Order table
 
 Grounding connects the agent to your Dataverse data so it can answer questions using real records rather than general knowledge.
 
-> **Important**: Two prerequisites are required before Dataverse knowledge sources will work:
+> [!IMPORTANT]
+> Two prerequisites are required before Dataverse knowledge sources will work:
 > - **Dataverse Search** must be enabled in your environment. If you can't add a Dataverse table in the steps below, ask your administrator to enable Dataverse Search in the Power Platform admin center.
-> - The agent's authentication must be set to **Authenticate with Microsoft**. To verify or set this: in the agent designer, select **Settings** > **Security** > **Authentication**, choose **Authenticate with Microsoft**, and select **Save**.
+> - The agent's authentication must be set to **Authenticate with Microsoft**. To verify or set this, in the agent designer, select **Settings**, then **Security**, then **Authentication**, choose **Authenticate with Microsoft**, and select **Save**.
 
 1. In the agent designer, select the **Knowledge** tab in the top navigation.
 
@@ -76,7 +81,8 @@ Grounding connects the agent to your Dataverse data so it can answer questions u
 
 1. Select **Add to agent**. The agent is now grounded on your Work Order data.
 
-    > **Note**: When grounded on a Dataverse table, the agent can retrieve and summarize records using natural language queries. It respects Dataverse security — it only returns records that the signed-in user has permission to see based on their assigned security role.
+   > [!NOTE]
+   > When grounded on a Dataverse table, the agent can retrieve and summarize records using natural language queries. It respects Dataverse security — it only returns records that the signed-in user has permission to see based on their assigned security role.
 
 ## Task 4: Configure suggested prompts
 
@@ -84,7 +90,7 @@ Suggested prompts appear at the start of a conversation, giving users ready-made
 
 1. In the agent designer, select the **Overview** tab.
 
-1. Scroll down to the **Suggested prompts** section and select **+ Add suggested prompts.**
+1. Scroll down to the **Suggested prompts** section and select **+ Add suggested prompts**.
 
 1. Add the following suggested prompts. For each one, enter a **Title** (the label users see) and a **Prompt** (the text sent to the agent):
 
@@ -97,7 +103,8 @@ Suggested prompts appear at the start of a conversation, giving users ready-made
 
 1. Select **Save**.
 
-    > **Note**: Suggested prompts are not visible in the Copilot Studio test panel. They appear on the agent's welcome page only when the agent is deployed to a channel such as Teams or an embedded app. You won't see them during testing in this lab, but they would be ready in a published or deployed agent.
+   > [!NOTE]
+   > Suggested prompts are not visible in the Copilot Studio test panel. They appear on the agent's welcome page only when the agent is deployed to a channel such as Teams or an embedded app. You won't see them during testing in this lab, but they would be ready in a published or deployed agent.
 
 ## Task 5: Create an escalation topic
 
@@ -115,7 +122,8 @@ Topics let your agent respond to specific phrases with a guided, structured resp
     Trigger this topic when the user wants to escalate a Work Order, mentions a critical issue, or asks for help with an urgent situation that needs immediate attention.
     ```
 
-    > **Note**: With generative orchestration, you describe the topic's purpose in plain language rather than listing exact phrases. The AI reads this description to decide when to route the conversation to this topic — so a clear, specific description produces more reliable triggering.
+   > [!NOTE]
+   > With generative orchestration, you describe the topic's purpose in plain language rather than listing exact phrases. The AI reads this description to decide when to route the conversation to this topic — so a clear, specific description produces more reliable triggering.
 
 1. Below the trigger node, select **+** to add a node, then select **Send a message**. Enter the following:
 
@@ -143,7 +151,8 @@ Topics let your agent respond to specific phrases with a guided, structured resp
 
 1. Select **Save** to save the topic.
 
-    > **Note**: Topics take priority over generative answers. When a user sends a message that matches a trigger phrase, the agent follows the topic's defined path rather than generating a free-form response. This makes topics ideal for high-stakes scenarios — like escalations — where you want consistent, predictable behavior.
+   > [!NOTE]
+   > Topics take priority over generative answers. When a user sends a message that matches a trigger phrase, the agent follows the topic's defined path rather than generating a free-form response. This makes topics ideal for high-stakes scenarios — like escalations — where you want consistent, predictable behavior.
 
 ## Task 6: Test the agent in Copilot Studio
 
@@ -159,7 +168,8 @@ Before evaluating, test the agent to confirm it responds correctly — both to W
 
 1. Review the responses. The first three should return data-driven answers from your Work Order table. The last should trigger the **Work Order Escalation** topic and walk through the checklist.
 
-    > **Note**: If your environment doesn't have any Work Order records yet, create a few test records in the model-driven app from Lab 6 before testing. Use different customers, priorities, and statuses to get useful responses.
+   > [!NOTE]
+   > If your environment doesn't have any Work Order records yet, create a few test records in the model-driven app from Lab 6 before testing. Use different customers, priorities, and statuses to get useful responses.
 
 1. If responses are inaccurate or overly generic, select the response and use the **Feedback** controls to help improve the agent.
 
@@ -167,7 +177,7 @@ Before evaluating, test the agent to confirm it responds correctly — both to W
 
 In Lab 2, Plan Designer generated a solution with three tables: **Account**, **Field Technician**, and **Service Request**. Before grounding your comparison agent on them, take a moment to understand what each table represents — and how it relates to what you actually built.
 
-1. Keep the Copilot Studio tab open. In a new tab, open [Power Apps](https://make.powerapps.com){:target="_blank"} at `https://make.powerapps.com` and navigate to **Solutions**.
+1. Keep the Copilot Studio tab open. In a new tab, open [**Power Apps**](https://make.powerapps.com) at `https://make.powerapps.com` and navigate to **Solutions**.
 
 1. Locate the solution you created in Lab 2 with Plan Designer and open it. (It may be named something like **Field Service Request Manager** — if you're not sure which one it is, ask your instructor.)
 
@@ -184,10 +194,12 @@ Now you'll create a second agent, a **Plan Comparison Assistant**, grounded on t
     ```
     An assistant that helps compare an AI-generated solution plan to the actual solution that was built. It can answer questions about what was planned, what was built, and what differences exist between the two.
     ```
+    
+1. Select the arrow to submit and wait for the agent to provision.
 
-1. Select the arrow to submit. Review the generated name and update it to `Plan Comparison Assistant`.
+1. Review the generated name. Under the **Details** section, select **Edit** and update the name to `Plan Comparison Assistant`, then select **Save**.
 
-1. On the **Overview** page, find the **Instructions** field and select **Edit.**
+1. On the **Overview** page, find the **Instructions** section and select **Edit.**
 
 1. Update it to include the following, substituting your own plan table names where indicated:
 
@@ -195,9 +207,10 @@ Now you'll create a second agent, a **Plan Comparison Assistant**, grounded on t
     You have access to two sets of data. The [your **Plan** table names] tables represent an AI-generated solution plan created in Lab 2. The Work Order (contoso_workorder) table represents the solution that was actually built during this course. When asked comparison questions, always frame your answers in terms of "what the plan suggested" versus "what was built."
     ```
 
-    > **Note**: This context is critical. Without it, the agent sees all four tables equally and can't reason about which represents the plan and which represents the built solution.
+   > [!NOTE]
+   > This context is critical. Without it, the agent sees all four tables equally and can't reason about which represents the plan and which represents the built solution.
 
-1. Select **Save.**
+1. Select **Save**.
 
 1. Select the **Knowledge** tab, then select **+ Add knowledge**.
 
@@ -207,7 +220,7 @@ Now you'll create a second agent, a **Plan Comparison Assistant**, grounded on t
 
 1. Select **+ Add knowledge** again, select **Dataverse**, and add the **Work Order** table (`contoso_workorder`). 
 
-1. Select **Add to agent.**
+1. Select **Add to agent**.
 
 1. Select **Test** to open the test panel and try the following questions:
     - `Can you summarize the tables I built versus the tables the Plan created?`
@@ -218,13 +231,14 @@ Now you'll create a second agent, a **Plan Comparison Assistant**, grounded on t
 
 1. Review the responses and take notes on what the agent returns for each question. You'll use these observations in Task 9.
 
-    > **Note**: The quality of the agent's responses depends on how much data is in your tables. If the Plan Designer tables are mostly empty, responses will be sparse — which is itself a useful observation about the limits of plan-only data as a knowledge source.
+   > [!NOTE]
+   > The quality of the agent's responses depends on how much data is in your tables. If the Plan Designer tables are mostly empty, responses will be sparse — which is itself a useful observation about the limits of plan-only data as a knowledge source.
 
 ## Task 9: Reflect and share out
 
 The Plan Comparison agent can reason about table schemas and data, but a solution is more than tables. Cloud flows, apps, and security roles exist only as solution components, not as Dataverse records, so the agent has no visibility into them. To get the full picture, you'll browse the solution manually alongside your agent observations.
 
-1. Open [Power Apps](https://make.powerapps.com){:target="_blank"} and navigate to **Solutions**. Open the solution you created in Lab 2 with Plan Designer.
+1. Open [**Power Apps**](https://make.powerapps.com) at `https://make.powerapps.com` and navigate to **Solutions**. Open the solution you created in Lab 2 with Plan Designer.
 
 1. Select **Objects** and spend 2–3 minutes browsing through the full component list. Look at each category:
     - **Tables:** compare to what the agent told you about the plan's data model
@@ -249,7 +263,8 @@ The Plan Comparison agent can reason about table schemas and data, but a solutio
    - *"If you were starting a real field service project tomorrow, how would you use Plan Designer differently?"*
    - *"What seems easier: creating the model from scratch like we did, or editing components that the Plan Designer created?"*
 
-    > **Key takeaway**: AI-assisted planning is a powerful starting point, not a finished blueprint. The gap between what a plan generates and what a real solution requires is exactly where human judgment, domain expertise, and iterative testing add value. You've experienced that gap firsthand across these labs.
+   > [!TIP]
+   > AI-assisted planning is a powerful starting point, not a finished blueprint. The gap between what a plan generates and what a real solution requires is exactly where human judgment, domain expertise, and iterative testing add value. You've experienced that gap firsthand across these labs.
 
 ## Verify your work
 
@@ -259,5 +274,5 @@ Before moving on, confirm the following:
 - The agent is grounded on the **Work Order** (`contoso_workorder`) Dataverse table
 - The agent has at least four suggested prompts configured
 - The **Work Order Escalation** topic exists and triggers correctly on escalation phrases
-- The **Plan Comparison Assistant** agent exists in Copilot Studio and is grounded on the **Account**, **Field Technician**, **Service Request**, and **Work Order** tables
+- The **Plan Comparison Assistant** agent exists in Copilot Studio and is grounded on tables you identified in Task 7 and the **Work Order** table.
 - You can articulate at least one thing the plan predicted correctly, one divergence, and one thing you built beyond the plan
