@@ -21,7 +21,7 @@ A model-driven app is the right tool for this — it's built directly on your Da
 
 ## Task 1: Create the model-driven app
 
-1. Open [Power Apps](https://make.powerapps.com) at `https://make.powerapps.com` and sign in with your Microsoft account.
+1. Open [**Power Apps**](https://make.powerapps.com) at `https://make.powerapps.com` and sign in with your Microsoft account.
 
 1. Confirm you are in your **Dev One** environment.
 
@@ -29,7 +29,7 @@ A model-driven app is the right tool for this — it's built directly on your Da
 
 1. Open the **Contoso Field Services** solution.
 
-1. In the left menu, select **Objects.**
+1. In the left menu, select **Objects**.
 
 1. On the command bar, select **+ New** > **App** > **Model-driven app**.
 
@@ -71,7 +71,7 @@ Forms control what fields are shown when a manager opens a specific record.
 
 1. Select the pencil icon next to the form name to open the form designer.
 
-1. In the **Table columns** pane, unselect **Show only unused table columns.**
+1. In the **Table columns** pane, unselect **Show only unused table columns**.
 
 1. Review the form layout. Confirm the following fields are visible on the form. If they are not, drag fields from the right panel and around in the form so they appear in the following order:
     - Customer Name
@@ -84,7 +84,7 @@ Forms control what fields are shown when a manager opens a specific record.
     - Owner
 
 1. Add a **section** to organize the form more clearly:
-    - Select **Component**.
+    - Select **Components** from the left pane.
     - Select **1-column section**. The section will be added below the Owner field.
     - Label the new section `Resolution Details` from the **Properties** pane on the right.
     - Drag the **Resolved Date** field into this section.
@@ -97,7 +97,7 @@ Forms control what fields are shown when a manager opens a specific record.
 
 Views let you define exactly which records appear and which columns are shown when a manager opens the app. You'll create a filtered view that surfaces only the most urgent Work Orders, giving managers a focused queue without having to manually filter every time.
 
-1. Open a new browser tab and navigate to [Power Apps](https://make.powerapps.com) at `https://make.powerapps.com`. Keep the app designer tab open so you can return to it later.
+1. Open a new browser tab and navigate to [**Power Apps**](https://make.powerapps.com) at `https://make.powerapps.com`. Keep the app designer tab open so you can return to it later.
 
 1. In the left navigation, select **Solutions** and open the **Contoso Field Services** solution.
 
@@ -116,13 +116,13 @@ Views let you define exactly which records appear and which columns are shown wh
     - **Request Status**
     - **Assigned Technician**
 
-1. Before you can filter by Priority, you need to make it available as a filter option. By default, columns are not always enabled for Advanced Find, which is the underlying search and filter engine used by views. Select the dropdown arrow next to the **Priority** column header in the view designer and select **Edit column**.
+1. Before you can filter by Priority, you need to make it available as a filter option. By default, columns are not always enabled for Advanced Find, which is the underlying search and filter engine used by views. Select the dropdown arrow next to the **Priority** column header in the view designer and select **Edit table column**.
 
-1. In the column properties panel, check the box next to **Enable for Advanced Find**, then select **Save**. Priority will now appear as an option when configuring view filters.
+1. In the column properties panel, check the box next to **Enabled for Advanced Find**, then select **Save**. Priority will now appear as an option when configuring view filters.
 
 1. Select **Edit filters** in the right pane to add a filter condition.
 
-1. Select **+ Add row**. In the column picker, type `Priority` to search for it and select it. Set the operator to **Equals**. In the value picker, select both **High** and **Critical**.
+1. Select **+ Add** > **+ Add row**. In the column picker, type `Priority` to search for it and select it. Set the operator to **Equals**. In the value picker, select both **High** and **Critical**.
 
 1. Select **Ok**.
 
@@ -132,7 +132,7 @@ Views let you define exactly which records appear and which columns are shown wh
 
 1. Return to the tab with your model-driven app designer. In the left **Pages** pane, select **Work Orders view**.
 
-1. In the right **Views** tab, look for **High Priority Work Orders** under **In this app**. If it doesn't appear there, find it under **Not in this app**, select **...** next to it, and select **Add**.
+1. Expand the **Work Orders** pane on the right. In the **Views** tab, look for **High Priority Work Orders** under **In this app**. If it doesn't appear there, find it under **Not in this app**, select **...** next to it, and select **Add**.
 
 1. Select **Save**.
 
@@ -144,44 +144,46 @@ Charts give managers a visual snapshot of data without any code. You'll create a
 
 1. Select **Charts**, then select **+ New chart**. The chart designer opens.
 
-    > **Note**: The chart designer opens in the classic Unified Interface layout, which looks different from the modern app designer you've been using. This is expected.
+   > [!NOTE] 
+   > The chart designer opens in the classic Unified Interface layout, which looks different from the modern app designer you've been using. This is expected.
 
 1. Name the chart `Requests by Priority`.
 
 1. Select **Pie chart** as the chart type.
 
 1. Configure the chart data:
-    - **Legend Entries (Series)**: Set to **Work Orders** and **Count:All**. This counts the number of records in each group.
-    - **Horizontal (Category) Axis Labels**: Set to **Priority.** This groups the records by their Priority value.
+    - **Legend Entries (Series)**: Set to **Work Order** and **Count:All**. This counts the number of records in each group.
+    - **Horizontal (Category) Axis Labels**: Set to **Priority**. This groups the records by their Priority value.
 
 1. In the **Description** field, enter `Pie chart showing the distribution of Work Orders by priority level`.
 
-1. Select **Save and close**.
+1. Select **Save & close**.
 
-1. Back in the charts page of the Solution, select **Done.**
+1. Back in the charts page of the Solution, select **Done**.
 
 ## Task 7: Add a dashboard page
 
 Dashboards let managers see their most important data at a glance in a single page. You'll build a dashboard that combines the **High Priority Work Orders** view and the **Requests by Priority** chart side by side, then add it to the app as a page.
 
-1. Return to the **Contoso Field Services** solution page.
+1. Return to the **Contoso Field Services** solution page and select **All**.
 
-1. Select **+ New** > **Dashboard** from the command bar. A layout picker appears.
+1. Select **+ New** > **Dashboard** > **2-Column overview** from the command bar.
 
-    > **Note**: The dashboard designer opens in the classic Unified Interface layout, which looks different from the modern app designer you've been using. This is expected.
+   > [!NOTE]
+   > The dashboard designer opens in the classic Unified Interface layout, which looks different from the modern app designer you've been using. This is expected.
 
-1. Select **2-Column Regular Dashboard** and select **Create**. This is a standard dashboard layout that supports List and Chart components. Avoid the "Overview" or stream-based layouts — those only support Charts and Streams, not Lists.
+   This is a standard dashboard layout that supports List and Chart components.
 
 1. Name the dashboard `Service Manager Dashboard`.
 
-1. In the left column component, select the **List** icon (the grid icon in the center of the panel). Configure it:
-    - **Record type**: Work Orders (select the one with the **contoso_** prefix)
-    - **Default view**: High Priority Work Orders
+1. In the left column component, select the **List** icon (the grid icon in the center of the panel). Configure it and select **Add**:
+    - **Record type**: Work Order
+    - **View**: High Priority Work Orders
 
-1. In the right column component, select the **Chart** icon. Configure it:
-    - **Record type**: Work Orders (with the **contoso_** prefix)
-    - **Default view**: Active Work Orders
-    - **Chart name**: Requests by Priority
+1. In the right column component, select the **Chart** icon. Configure it and select **Add**:
+    - **Record type**: Work Order
+    - **View**: Active Work Orders
+    - **Chart**: Requests by Priority
 
 1. Select **Save**, then select **Close** to return to the solution.
 
@@ -189,13 +191,14 @@ Dashboards let managers see their most important data at a glance in a single pa
 
 1. Return to the app designer tab. Select **+ Add page**.
 
-1. Select **Dashboard**, then select **Next**.
+1. Select **Dashboard**.
 
 1. Find and select **Service Manager Dashboard**, then select **Add**.
 
-    > **Note**: If **Service Manager Dashboard** doesn't appear in the list, close the app designer tab and reopen the app from the solution. The modern app designer sometimes caches the available components and needs a full reload to pick up dashboards published from the classic designer.
+   > [!NOTE]
+   > If **Service Manager Dashboard** doesn't appear in the list, close the app designer tab and reopen the app from the solution. The modern app designer sometimes caches the available components and needs a full reload to pick up dashboards published from the classic designer.
 
-1. In the **Pages** pane, select the ellipses on **Service Manager Dashboard**. Then select **Move up.** The dashboard will now be the first item users see when they open the app.
+1. In the **Pages** pane, select the ellipses on **Service Manager Dashboard**, then select **Move up**. The dashboard will now be the first item users see when they open the app.
 
 1. Select **Save**.
 
@@ -213,6 +216,6 @@ Dashboards let managers see their most important data at a glance in a single pa
     - **Priority**: `Low`
     - **Request Status**: `New`
 
-1. Select **Save & Close** and confirm the new record appears in the view.
+1. Select **Save & Close** and confirm the new record appears in the **Active Work Orders** view.
 
 1. Select **Service Manager Dashboard.** Your pie chart should have updated to show a Low priority work order.
