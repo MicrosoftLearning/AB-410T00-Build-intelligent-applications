@@ -9,7 +9,7 @@ lab:
 
 # Configure Contoso security roles in Dataverse
 
-In this exercise, you create two security roles in Dataverse — one for field technicians and one for service managers — to control what each type of user can see and do with Work Order data.
+In this exercise, you create two security roles in Dataverse ï¿½ one for field technicians and one for service managers ï¿½ to control what each type of user can see and do with Work Order data.
 
 This exercise should take approximately **20** minutes to complete.
 
@@ -17,7 +17,7 @@ This exercise should take approximately **20** minutes to complete.
 
 Now that the Work Order table is in place, you need to make sure the right people have the right level of access. Contoso Field Services has two distinct user types:
 
-- **Field technicians** should only see and update Work Orders assigned to them — not every request in the system.
+- **Field technicians** should only see and update Work Orders assigned to them ï¿½ not every request in the system.
 - **Service managers** need full visibility and control over all Work Orders so they can assign, escalate, and report across the whole team.
 
 You'll create a Dataverse security role for each user type and configure the appropriate table privileges.

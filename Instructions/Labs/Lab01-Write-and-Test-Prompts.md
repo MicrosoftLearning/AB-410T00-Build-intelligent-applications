@@ -15,7 +15,7 @@ This exercise should take approximately **15** minutes to complete.
 
 ## Scenario
 
-Contoso Field Services installs and repairs industrial equipment for business customers across the region. The service team handles dozens of customer calls every day — questions about request status, troubleshooting guidance, and next steps while waiting for a technician.
+Contoso Field Services installs and repairs industrial equipment for business customers across the region. The service team handles dozens of customer calls every day ï¿½ questions about request status, troubleshooting guidance, and next steps while waiting for a technician.
 
 Agents currently answer these questions manually, searching through documentation and past cases. Your task is to write prompts that help agents use generative AI to generate accurate, professional, and helpful responses instantly.
 
@@ -33,7 +33,7 @@ First, you write a simple prompt and observe how specificity affects the quality
 
     `A customer's equipment isn't working. What should they do?`
 
-1. Review the response. Notice that the AI gives a generic answer — it has no context about the company, the type of equipment, or who is asking.
+1. Review the response. Notice that the AI gives a generic answer ï¿½ it has no context about the company, the type of equipment, or who is asking.
 
 1. Now enter this more specific version:
 
@@ -60,7 +60,7 @@ Next, you give the AI a defined role and background context before asking your q
 
 1. Review the response. Note how the persona instruction shapes the tone, the detail, and the closing statement.
 
-1. Ask a follow-up question in the same conversation — without repeating the persona:
+1. Ask a follow-up question in the same conversation ï¿½ without repeating the persona:
 
     `The customer says the system tripped a safety shutoff. What should the agent advise now?`
 
@@ -89,7 +89,7 @@ Now you practice controlling the length, format, and audience of the response.
 1. Modify the prompt once more to request the response be written for a **non-technical customer** who is unfamiliar with equipment terminology.
 
 > [!NOTE]
-> Adding constraints — length, format, tone, and audience — helps ensure AI output is ready to use in a real business context, not just technically accurate.
+> Adding constraints ï¿½ length, format, tone, and audience ï¿½ helps ensure AI output is ready to use in a real business context, not just technically accurate.
 
 ## Task 4: Use few-shot examples
 
@@ -117,7 +117,7 @@ Few-shot prompting gives the AI examples of the style and format you want before
 1. Replace the final customer message with a different scenario of your choosing and resubmit. Observe how the AI applies the same style to the new situation.
 
 > [!NOTE]
-> Few-shot prompting is especially useful when you need consistent output across many interactions — for example, when building a Copilot Studio topic or an AI Builder prompt action that many agents will use.
+> Few-shot prompting is especially useful when you need consistent output across many interactions ï¿½ for example, when building a Copilot Studio topic or an AI Builder prompt action that many agents will use.
 
 ## Summary
 
@@ -130,4 +130,4 @@ In this exercise, you practiced four core prompt engineering techniques:
 | **Output constraints** | Controlling length, format, and audience makes responses immediately usable |
 | **Few-shot examples** | Demonstrating the desired style produces more consistent output |
 
-These same techniques apply directly to prompts you build in Power Platform — including Copilot Studio topics and AI Builder prompt actions — which you explore in later exercises in this course.
+These same techniques apply directly to prompts you build in Power Platform ï¿½ including Copilot Studio topics and AI Builder prompt actions ï¿½ which you explore in later exercises in this course.

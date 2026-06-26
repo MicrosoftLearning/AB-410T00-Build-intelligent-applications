@@ -17,7 +17,7 @@ This exercise should take approximately **20** minutes to complete.
 
 Throughout this course, all labs follow a single, connected scenario based on a fictional company called **Contoso Field Services**.
 
-Contoso Field Services installs and repairs industrial equipment for business customers across the region. When a customer's equipment fails — a conveyor belt stops mid-shift, a hydraulic press loses pressure, a cooling system goes offline — they need help fast.
+Contoso Field Services installs and repairs industrial equipment for business customers across the region. When a customer's equipment fails ï¿½ a conveyor belt stops mid-shift, a hydraulic press loses pressure, a cooling system goes offline ï¿½ they need help fast.
 
 Today, Contoso's process is entirely manual:
 
@@ -36,7 +36,7 @@ Over the course of these labs, you'll build a complete Power Platform solution t
 - **Automated flows** that notify technicians when they're assigned and route critical requests through a manager approval
 - An **AI-powered assistant** that lets agents query Contoso's service history in natural language
 
-Every table, app, flow, and automation you build will be part of this single solution — so what you create in one lab is used in the next.
+Every table, app, flow, and automation you build will be part of this single solution ï¿½ so what you create in one lab is used in the next.
 
 ## Before you start
 
@@ -90,7 +90,7 @@ Power Pages is a separate product from Power Apps and requires its own trial act
 1. Confirm that the Power Pages home screen loads and shows the option to create a new site.
 
 > [!NOTE]
-> You don't need to create a site now — just confirm that your trial is active. You'll build the Contoso customer portal in Lab 7.
+> You don't need to create a site now ï¿½ just confirm that your trial is active. You'll build the Contoso customer portal in Lab 7.
 
 ## Task 4: Verify AI Builder access
 
@@ -109,6 +109,6 @@ AI Builder is used in Lab 10 to create a grounded prompt that queries Contoso's 
 
 ## You're ready
 
-Once you've completed all four tasks, you are ready to begin Lab 1. Keep your browser open with Power Apps and Power Automate tabs active — you'll use them throughout the course.
+Once you've completed all four tasks, you are ready to begin Lab 1. Keep your browser open with Power Apps and Power Automate tabs active ï¿½ you'll use them throughout the course.
 
 Your instructor will confirm that everyone's environment is set up before the first lab begins.
