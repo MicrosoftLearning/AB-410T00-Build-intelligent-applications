@@ -14,7 +14,7 @@ This exercise should take approximately **30** minutes to complete.
 
 ## Scenario
 
-When a Contoso service manager assigns a technician to a Work Order, the technician has no way of knowing unless someone tells them manually. Managers are currently sending texts and making phone calls — which is time-consuming and unreliable.
+When a Contoso service manager assigns a technician to a Work Order, the technician has no way of knowing unless someone tells them manually. Managers are currently sending texts and making phone calls ï¿½ which is time-consuming and unreliable.
 
 You'll create a cloud flow that runs automatically whenever a new Work Order record is created in Dataverse, checks whether a technician has been assigned, and sends them an email with the job details.
 
@@ -53,7 +53,7 @@ You'll create a cloud flow that runs automatically whenever a new Work Order rec
 
 ## Task 3: Add a condition to check for an assigned technician
 
-Not all new Work Orders will have a technician assigned yet — some will be unassigned when first created. You'll add a condition so the email only sends when a technician name is present.
+Not all new Work Orders will have a technician assigned yet ï¿½ some will be unassigned when first created. You'll add a condition so the email only sends when a technician name is present.
 
 1. Search for and select **Condition** (under Control).
 
