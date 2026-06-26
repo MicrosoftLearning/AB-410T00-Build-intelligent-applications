@@ -1,4 +1,4 @@
-ï»¿---
+---
 lab:
     title: 'Set up your lab environment'
     description: 'Activate your Power Platform trial and configure your environment before starting the course labs'
@@ -17,7 +17,7 @@ This exercise should take approximately **20** minutes to complete.
 
 Throughout this course, all labs follow a single, connected scenario based on a fictional company called **Contoso Field Services**.
 
-Contoso Field Services installs and repairs industrial equipment for business customers across the region. When a customer's equipment fails â€” a conveyor belt stops mid-shift, a hydraulic press loses pressure, a cooling system goes offline â€” they need help fast.
+Contoso Field Services installs and repairs industrial equipment for business customers across the region. When a customer's equipment fails — a conveyor belt stops mid-shift, a hydraulic press loses pressure, a cooling system goes offline — they need help fast.
 
 Today, Contoso's process is entirely manual:
 
@@ -36,7 +36,7 @@ Over the course of these labs, you'll build a complete Power Platform solution t
 - **Automated flows** that notify technicians when they're assigned and route critical requests through a manager approval
 - An **AI-powered assistant** that lets agents query Contoso's service history in natural language
 
-Every table, app, flow, and automation you build will be part of this single solution â€” so what you create in one lab is used in the next.
+Every table, app, flow, and automation you build will be part of this single solution — so what you create in one lab is used in the next.
 
 ## Before you start
 
@@ -61,8 +61,8 @@ You will be provided with a **Microsoft 365 license** by your Authorized Lab Hos
 
 1. Confirm that the environment picker in the top-right corner now shows **Dev One**. This is the environment you will use throughout all labs in this course.
 
-   > [!NOTE]
-   > Dev One includes Microsoft Dataverse, which is required for all labs in this course. If you don't see Dev One in the environment list, let your instructor know.
+> [!NOTE]
+> Dev One includes Microsoft Dataverse, which is required for all labs in this course. If you don't see Dev One in the environment list, let your instructor know.
 
 ## Task 2: Verify your Power Automate access
 
@@ -74,8 +74,8 @@ You will be provided with a **Microsoft 365 license** by your Authorized Lab Hos
 
 1. In the left navigation, select **+ Create**. Confirm you can see **Automated cloud flow** as an option.
 
-   > [!NOTE]
-   > Labs 8 and 9 use the Dataverse connector in Power Automate, which is a premium connector. Your Power Apps trial includes premium Power Automate capabilities. If you see a message about upgrading your plan when building flows, let your instructor know.
+> [!NOTE]
+> Labs 8 and 9 use the Dataverse connector in Power Automate, which is a premium connector. Your Power Apps trial includes premium Power Automate capabilities. If you see a message about upgrading your plan when building flows, let your instructor know.
 
 ## Task 3: Start your Power Pages trial
 
@@ -89,8 +89,8 @@ Power Pages is a separate product from Power Apps and requires its own trial act
 
 1. Confirm that the Power Pages home screen loads and shows the option to create a new site.
 
-   > [!NOTE]
-   > You don't need to create a site now â€” just confirm that your trial is active. You'll build the Contoso customer portal in Lab 7.
+> [!NOTE]
+> You don't need to create a site now — just confirm that your trial is active. You'll build the Contoso customer portal in Lab 7.
 
 ## Task 4: Verify AI Builder access
 
@@ -104,11 +104,11 @@ AI Builder is used in Lab 10 to create a grounded prompt that queries Contoso's 
 
 1. If you see a message about AI Builder credits or a prompt to start a trial, select **Try AI Builder** or **Start trial** to activate your AI Builder credits.
 
-   > [!NOTE]
-   > AI Builder credits are consumed each time a prompt is run or a model is used. Use the **Test** feature thoughtfully during Lab 10 to avoid depleting your trial credits before completing the exercise.
+> [!NOTE]
+> AI Builder credits are consumed each time a prompt is run or a model is used. Use the **Test** feature thoughtfully during Lab 10 to avoid depleting your trial credits before completing the exercise.
 
 ## You're ready
 
-Once you've completed all four tasks, you are ready to begin Lab 1. Keep your browser open with Power Apps and Power Automate tabs active â€” you'll use them throughout the course.
+Once you've completed all four tasks, you are ready to begin Lab 1. Keep your browser open with Power Apps and Power Automate tabs active — you'll use them throughout the course.
 
 Your instructor will confirm that everyone's environment is set up before the first lab begins.

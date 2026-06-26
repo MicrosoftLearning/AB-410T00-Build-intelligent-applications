@@ -1,4 +1,4 @@
-﻿---
+---
 lab:
     title: 'Build a canvas app for Contoso field technicians'
     description: 'Create and customize a canvas app in Microsoft Power Apps that field technicians use to view and update their assigned Work Orders'
@@ -15,7 +15,7 @@ This exercise should take approximately **60** minutes to complete.
 
 ## Scenario
 
-Contoso field technicians spend their days traveling between customer sites. They need a simple, mobile-friendly app to see which jobs they've been assigned, view the details of each request, and update the status when work is complete — all from their phone.
+Contoso field technicians spend their days traveling between customer sites. They need a simple, mobile-friendly app to see which jobs they've been assigned, view the details of each request, and update the status when work is complete � all from their phone.
 
 You'll build this app connected to the Work Order table you created in Lab 3, with a list screen showing assigned requests and a detail screen where technicians can update status.
 
@@ -57,8 +57,8 @@ Now you'll set up the main screen to display a gallery of Work Orders.
 
 1. Resize and reposition the gallery to fill the screen, leaving space for a title bar at the top.
 
-   > [!NOTE]
-   > Once the gallery is connected to Work Orders, you should see the three sample records you created in Lab 3 (Adatum Corporation, Tailwind Traders, Fabrikam Inc) appear in the gallery. If the gallery is empty, confirm that you selected the correct Work Orders table with the **contoso_** prefix.
+> [!NOTE]
+> Once the gallery is connected to Work Orders, you should see the three sample records you created in Lab 3 (Adatum Corporation, Tailwind Traders, Fabrikam Inc) appear in the gallery. If the gallery is empty, confirm that you selected the correct Work Orders table with the **contoso_** prefix.
 
 1. With the gallery selected, a small popup appears pinned just above the gallery. Select **Layout** in that popup and choose the layout that shows **Title, subtitle, and body**.
 
@@ -71,8 +71,8 @@ Now you'll set up the main screen to display a gallery of Work Orders.
 
 1. Set the label **Text** property to `"My Work Orders"` in the formula bar.
 
-   > [!NOTE]
-   > The double quotes are required. Power Apps treats everything in the formula bar as an expression, not plain text. Without quotes, it tries to interpret `My Work Orders` as a formula reference and throws an error. Wrapping the value in double quotes tells Power Apps to treat it as a literal text string.
+> [!NOTE]
+> The double quotes are required. Power Apps treats everything in the formula bar as an expression, not plain text. Without quotes, it tries to interpret `My Work Orders` as a formula reference and throws an error. Wrapping the value in double quotes tells Power Apps to treat it as a literal text string.
 
 1. Format the label: set the **Background color** to a dark blue, the **Color** (text) to white, and increase the **FontSize** to `36`.
 
@@ -92,13 +92,13 @@ Now you'll add a second screen where technicians can view full details and updat
 
 1. By default, the form is positioned at the very top of the screen, which leaves no room for a Back button. In the **Tree view**, select **Form1**, then drag it down to leave space at the top of the screen for a button.
 
-1. A popup appears directly over the form. Select **Fields** — this surfaces a dropdown with AI-suggested fields based on your data source. Remove the ones you don't need and add the missing one:
+1. A popup appears directly over the form. Select **Fields** � this surfaces a dropdown with AI-suggested fields based on your data source. Remove the ones you don't need and add the missing one:
     - **Remove**: `Customer Email`, `Status Reason`, and `Record created on` (select the ellipsis next to each and select **Remove**)
     - **Add**: select **+ Add field**, search for `Assigned Technician`, and select **Add**
 
     When done, the form should show: Customer Name, Issue Description, Priority, Request Status, Assigned Technician, and Resolved Date.
 
-1. Assigned Technician will appear at the bottom of the field list. Drag it above **Resolved Date** so the fields are in this order: Customer Name, Issue Description, Priority, Request Status, Assigned Technician, Resolved Date.
+1. Assigned Technician will appear at the bottom of the field list. Drag it above **Resolved Date**.
 
 ## Task 5: Add navigation buttons to the detail screen
 
@@ -108,12 +108,12 @@ Now you'll add Back and Save buttons so technicians can navigate and submit upda
 
 1. When the button is inserted, notice the formula bar at the top of the screen. The property dropdown on the left side already shows **OnSelect** by default.
 
-1. Before using Copilot, clear any existing content from the formula bar — if there's already a formula there, Copilot will append to it rather than replace it.
+1. Before using Copilot, clear any existing content from the formula bar � if there's already a formula there, Copilot will append to it rather than replace it.
 
 1. Select the **Copilot** icon in the formula bar and select **Create a formula (preview)**. This button will navigate back to the previous screen, so type `go back to the previous screen` and press **Enter**. Copilot suggests the formula `Back()`. Select **Apply** to apply it.
 
-   > [!NOTE]
-   > If Copilot isn't available in your environment, or gives you a response you didn't expect, you can type `Back()` directly in the formula bar.
+> [!NOTE]
+> If Copilot isn't available in your environment, or gives you a response you didn't expect, you can type `Back()` directly in the formula bar.
 
 1. Now set the button label: select the property dropdown and choose **Text**. Type `"Back"` in the formula bar.
 
@@ -140,9 +140,9 @@ Now you'll connect the gallery on the first screen to the detail screen.
 
 1. Now set the **OnSelect** property of **NextArrow**. When a technician taps the arrow on a gallery item, you want the app to navigate to the detail screen for that request with a slide transition. Confirm the property dropdown in the formula bar shows **OnSelect**.
 
-1. Clear any existing content from the formula bar — Copilot appends to whatever is already there.
+1. Clear any existing content from the formula bar � Copilot appends to whatever is already there.
 
-1. Select the **Copilot** icon and choose **Create a formula (preview)**. Describe what you want — for example, type `navigate to the detail screen with a slide transition` and press **Enter**.
+1. Select the **Copilot** icon and choose **Create a formula (preview)**. Describe what you want � for example, type `navigate to the detail screen with a slide transition` and press **Enter**.
 
 1. Review the formula Copilot suggests. It should be:
 
@@ -178,8 +178,8 @@ Now you'll build a Power Automate flow that uses an AI Builder prompt to analyze
 
 1. Add a new step: search for **AI Builder** and select **Run a prompt**.
 
-   > [!NOTE]
-   > You may be prompted to authenticate or sign in to AI Builder at this point. Follow the on-screen steps to connect, then continue.
+> [!NOTE]
+> You may be prompted to authenticate or sign in to AI Builder at this point. Follow the on-screen steps to connect, then continue.
 
 1. Configure the **Run a prompt** step with the following values:
     - **Prompt**: select **AI Classify** from the dropdown
@@ -227,8 +227,8 @@ Now you'll wire the flow to the canvas app and display the AI suggestion on scre
 
 1. On the detail screen, select **Suggest Priority**. After a few seconds, the label should display a suggested priority based on the issue description.
 
-   > [!NOTE]
-   > AI Builder prompt actions require an AI Builder capacity allocation in your environment. If the flow fails with a licensing error, check with your administrator or use a trial capacity add-on. Results may vary — the AI suggestion is a starting point, not a definitive answer.
+> [!NOTE]
+> AI Builder prompt actions require an AI Builder capacity allocation in your environment. If the flow fails with a licensing error, check with your administrator or use a trial capacity add-on. Results may vary � the AI suggestion is a starting point, not a definitive answer.
 
 1. Change the **Request Status** value and select **Save**.
 
@@ -242,5 +242,5 @@ Now you'll wire the flow to the canvas app and display the AI suggestion on scre
 
 1. Select **Publish** and then **Publish this version** to make the app available to users.
 
-   > [!NOTE]
-   > Sharing the app with specific users and assigning security roles is covered in a separate module. For now, the app is published and accessible in your environment.
+> [!NOTE]
+> Sharing the app with specific users and assigning security roles is covered in a separate module. For now, the app is published and accessible in your environment.

@@ -1,4 +1,4 @@
-﻿---
+---
 lab:
     title: 'Automate technician notification with a cloud flow'
     description: 'Create an automated cloud flow in Microsoft Power Automate that notifies a field technician when a new Work Order is assigned to them'
@@ -14,7 +14,7 @@ This exercise should take approximately **30** minutes to complete.
 
 ## Scenario
 
-When a Contoso service manager assigns a technician to a Work Order, the technician has no way of knowing unless someone tells them manually. Managers are currently sending texts and making phone calls — which is time-consuming and unreliable.
+When a Contoso service manager assigns a technician to a Work Order, the technician has no way of knowing unless someone tells them manually. Managers are currently sending texts and making phone calls � which is time-consuming and unreliable.
 
 You'll create a cloud flow that runs automatically whenever a new Work Order record is created in Dataverse, checks whether a technician has been assigned, and sends them an email with the job details.
 
@@ -53,7 +53,7 @@ You'll create a cloud flow that runs automatically whenever a new Work Order rec
 
 ## Task 3: Add a condition to check for an assigned technician
 
-Not all new Work Orders will have a technician assigned yet — some will be unassigned when first created. You'll add a condition so the email only sends when a technician name is present.
+Not all new Work Orders will have a technician assigned yet � some will be unassigned when first created. You'll add a condition so the email only sends when a technician name is present.
 
 1. Search for and select **Condition** (under Control).
 
@@ -78,8 +78,8 @@ Not all new Work Orders will have a technician assigned yet — some will be una
     - **Table name**: Users
     - **Row ID**: Type `/` and select **Insert dynamic content**. Search for and select **Assigned Technician (Value)**.
 
-   > [!NOTE]
-   > This action retrieves the full User record for the assigned technician so you can access their email address in the next step.
+> [!NOTE]
+> This action retrieves the full User record for the assigned technician so you can access their email address in the next step.
 
 1. Select the plus sign below the **Get a row by ID** action to add another action.
 
@@ -130,15 +130,15 @@ Not all new Work Orders will have a technician assigned yet — some will be una
 
 1. Select **Save** to save the record.
 
-   > [!NOTE]
-   >  Create the test record through the model-driven app rather than directly in the table editor. The app form ensures the lookup field value is properly committed when the record is saved, so the flow trigger receives a valid Assigned Technician ID. Creating a record directly in the table editor can result in the lookup value not being passed to the trigger correctly.
+> [!NOTE]
+>  Create the test record through the model-driven app rather than directly in the table editor. The app form ensures the lookup field value is properly committed when the record is saved, so the flow trigger receives a valid Assigned Technician ID. Creating a record directly in the table editor can result in the lookup value not being passed to the trigger correctly.
 
 1. Return to Power Automate and check the test results. The flow should have triggered and show a successful run.
 
 1. Open a new browser tab and go to [**Outlook**](https://outlook.office.com) at `https://outlook.office.com`. Sign in with your MOD Administrator email address provided by your Authorized Lab Host and check your inbox for the notification email.
 
-   > [!NOTE]
-   > If the flow run shows an error, select the failed step to see the error details. Common issues include connection problems (you may need to sign in to the Outlook connector) or dynamic content mapping errors.
+> [!NOTE]
+> If the flow run shows an error, select the failed step to see the error details. Common issues include connection problems (you may need to sign in to the Outlook connector) or dynamic content mapping errors.
 
 ## Task 6: Review the flow run history
 
@@ -148,5 +148,5 @@ Not all new Work Orders will have a technician assigned yet — some will be una
 
 1. Select the run to see a detailed view of each step, the inputs, and the outputs.
 
-   > [!NOTE]
-   > The run history is your primary debugging tool in Power Automate. Each step shows exactly what data it received and what it returned, making it straightforward to identify where a flow went wrong.
+> [!NOTE]
+> The run history is your primary debugging tool in Power Automate. Each step shows exactly what data it received and what it returned, making it straightforward to identify where a flow went wrong.

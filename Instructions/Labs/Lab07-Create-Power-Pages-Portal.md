@@ -56,13 +56,13 @@ Power Pages includes a Copilot-powered site creation experience. Instead of star
     - About us
     - Contact us
 
-   > [!NOTE]
-   > Copilot may not suggest all of these pages depending on your prompt results. If any are missing, you can ask Copilot to create them once the site is provisioned — you'll do this in the next task. If you run into any issues, ask your instructor for help.
+> [!NOTE]
+> Copilot may not suggest all of these pages depending on your prompt results. If any are missing, you can ask Copilot to create them once the site is provisioned — you'll do this in the next task. If you run into any issues, ask your instructor for help.
 
 1. Select **Done** to provision the site. This may take 1–2 minutes.
 
-   > [!NOTE]
-   > Copilot generates a starter site with pages, navigation, and placeholder content — all from your description. You'll review and refine it in the next task.
+> [!NOTE]
+> Copilot generates a starter site with pages, navigation, and placeholder content — all from your description. You'll review and refine it in the next task.
 
 ## Task 2: Review and refine the generated site
 
@@ -72,8 +72,8 @@ Once provisioning completes, Power Pages Studio opens with a preview of your gen
 
 1. Look at the **Pages** panel on the left. Confirm Copilot created at least a **Home** page and a page for submitting requests.
 
-   > [!NOTE]
-   > If any expected pages are missing, open the Copilot panel and ask it to create them — for example: `Add a page called "Submit a Request" for customers to submit new Work Orders.` Copilot will add the page to your site. Ask your instructor if you run into any issues.
+> [!NOTE]
+> If any expected pages are missing, open the Copilot panel and ask it to create them — for example: `Add a page called "Submit a Request" for customers to submit new Work Orders.` Copilot will add the page to your site. Ask your instructor if you run into any issues.
 
 1. Select the **Home** page to preview it. Review the generated heading and body text.
 
@@ -85,8 +85,8 @@ Once provisioning completes, Power Pages Studio opens with a preview of your gen
    
 1. Review the changes Copilot suggests and select **Keep it** to accept them.
 
-   > [!NOTE]
-   > Copilot suggestions might not always produce the expected result. If Copilot doesn't add a working button, add one manually. Hover over a component and select the **+** button, then select **Button**. In the **Edit button** dialog, rename the **Button label** to Submit a Work Order, select the **Link to a page** checkbox, select the **Submit a Request** page, and then select **OK**. Before continuing, verify that the button is displayed on the home page and navigates to the correct page.
+> [!NOTE]
+> Copilot suggestions might not always produce the expected result. If Copilot doesn't add a working button, add one manually. Hover over a component and select the **+** button, then select **Button**. In the **Edit button** dialog, rename the **Button label** to Submit a Work Order, select the **Link to a page** checkbox, select the **Submit a Request** page, and then select **OK**. Before continuing, verify that the button is displayed on the home page and navigates to the correct page.
 
 1. Now update the home page text manually. Select the main heading on the page and change it to:
 
@@ -94,8 +94,8 @@ Once provisioning completes, Power Pages Studio opens with a preview of your gen
 
 1. Select the subheading or body text below the heading. With the text box selected, select the **Copilot** icon that appears, then select **Rewrite**. Copilot will suggest a few alternative versions of the text. Review the options and select the one that best fits a customer-facing field services portal. Select **Replace text** when you're ready.
 
-   > [!NOTE]
-   > If you're not happy with any of the suggestions, select **Try again** to generate more options, or select **Edit** to tweak the text manually before accepting.
+> [!NOTE]
+> If you're not happy with any of the suggestions, select **Try again** to generate more options, or select **Edit** to tweak the text manually before accepting.
 
 1. Select **Sync** in the top toolbar to save your changes.
 
@@ -129,8 +129,8 @@ Before you can add a form to the portal, you need to create a dedicated form on 
 
     To remove a field, select it and select the **ellipses (...)**, then choose **Delete**. For required fields that can't be deleted, choose **Hide** instead — they'll be excluded from the form without breaking validation.
 
-   > [!NOTE]
-   > Designing the form this way — with only customer-facing fields — means there's no risk of accidentally exposing internal fields in the portal. It's safer and cleaner than trying to hide fields after the fact in Power Pages.
+> [!NOTE]
+> Designing the form this way — with only customer-facing fields — means there's no risk of accidentally exposing internal fields in the portal. It's safer and cleaner than trying to hide fields after the fact in Power Pages.
 
 1. Select **Save and publish**, then close the form designer tab.
 
@@ -146,8 +146,8 @@ With the Customer Portal form published, you can now add it as a component on th
 
 1. Your page may look different depending on the layout and content Copilot generated, and that's expected. Regardless of what's already on the page, you'll add a form section. Under the first section, select **+ Add a section**, then select **1 Column**.
 
-   > [!TIP]
-   > Copilot may have generated several sections on this page that you don't need. To clean it up before adding the form, select a section you want to remove, select the **ellipses (...)** that appears on the section, and select **Delete**. Repeat until the page is as simple as you'd like.
+> [!TIP]
+> Copilot may have generated several sections on this page that you don't need. To clean it up before adding the form, select a section you want to remove, select the **ellipses (...)** that appears on the section, and select **Delete**. Repeat until the page is as simple as you'd like.
 
 1. Select **+ Add component** in the new section, then select **Form**. If you're prompted to describe the form, select **+ New form** under **Other ways to get started**.
 
@@ -185,8 +185,8 @@ Power Pages uses an explicit security model; external users cannot read or write
 
 1. Select **Save** and **Save** again to confirm.
 
-   > [!NOTE]
-   > **Anonymous Users** allows anyone to submit without signing in — appropriate for a public submission form. In a production portal, you would use **Authenticated Users** and add row-level filtering so customers can only see their own requests.
+> [!NOTE]
+> **Anonymous Users** allows anyone to submit without signing in — appropriate for a public submission form. In a production portal, you would use **Authenticated Users** and add row-level filtering so customers can only see their own requests.
 
 ## Task 6: Extend the Work Order data model
 
@@ -207,8 +207,8 @@ Before testing the portal, you'll add two new columns to the Work Order table: a
 
     Leave **Required** set to **Optional** — the value is generated automatically when the record is created, so it will never be empty.
 
-   > [!NOTE]
-   > The seed value is the starting number for the sequence. The default is `1000`, which would produce `WO-01000` for the first record. Setting it to `1` starts the sequence at `WO-00001`.
+> [!NOTE]
+> The seed value is the starting number for the sequence. The default is `1000`, which would produce `WO-01000` for the first record. Setting it to `1` starts the sequence at `WO-00001`.
 
 1. Select **Save**. Every new Work Order record will now automatically receive a unique reference number like `WO-00001`.
 
@@ -221,8 +221,8 @@ Before testing the portal, you'll add two new columns to the Work Order table: a
 
     Select **Save**. This column calculates 48 hours from the time the record was created, representing Contoso's standard SLA.
 
-   > [!NOTE]
-   > Formula columns recalculate dynamically. The Estimated Resolution date will always reflect 48 hours from when the record was first created, which is the correct SLA baseline.
+> [!NOTE]
+> Formula columns recalculate dynamically. The Estimated Resolution date will always reflect 48 hours from when the record was first created, which is the correct SLA baseline.
 
 1. Now create a dedicated view for the portal status page. In the **Work Order** table, select **Views**, then select **+ New view**. Configure it:
     - **Name**: `Portal Status View`
@@ -240,8 +240,8 @@ Before testing the portal, you'll add two new columns to the Work Order table: a
 
 1. Select **Save and publish**.
 
-   > [!NOTE]
-   > You may notice that the **Work Order Number** column is blank for existing records in the view. This is expected. Autonumber columns only generate values for records created after the column is added, so existing records are not backfilled. The Work Order Number will populate correctly for any new record submitted through the portal, including the test record you'll create next.
+> [!NOTE]
+> You may notice that the **Work Order Number** column is blank for existing records in the view. This is expected. Autonumber columns only generate values for records created after the column is added, so existing records are not backfilled. The Work Order Number will populate correctly for any new record submitted through the portal, including the test record you'll create next.
 
 
 1. Select the **Back** arrow (←) in the top-left corner and return to the **Work Order** table.
@@ -285,8 +285,8 @@ Now that the new columns and views are ready, you'll build the Request Status pa
     1. Request status
     1. Contact us (and any other pages, in whatever order you prefer)
 
-   > [!NOTE]
-   > To reorder a page, select and hold the page in the **Pages** panel, then drag it to the new position. The navigation menu on the live site will reflect this order.
+> [!NOTE]
+> To reorder a page, select and hold the page in the **Pages** panel, then drag it to the new position. The navigation menu on the live site will reflect this order.
 
 1. Select **Sync** to save the updated navigation.
 
@@ -298,8 +298,8 @@ You'll now run through the complete customer journey: submit a Work Order throug
 
 1. In the top toolbar, select **Preview** > **Desktop** to open the portal in a new browser tab.
 
-   > [!NOTE] 
-   > If prompted with a permissions request, select **Accept** to allow the preview to access your Dataverse environment. This is expected the first time you preview a Power Pages site.
+> [!NOTE] 
+> If prompted with a permissions request, select **Accept** to allow the preview to access your Dataverse environment. This is expected the first time you preview a Power Pages site.
 
 1. Select **Submit a Work Order** and fill in the form:
     - **Customer Name**: `Southridge Video`
@@ -307,8 +307,8 @@ You'll now run through the complete customer journey: submit a Work Order throug
     - **Issue Description**: `Video editing workstation won't power on`
     - If prompted for a CAPTCHA, fill it out.
   
-   > [!NOTE] 
-   > You may see an error message saying that the **Customer Name** field won't display, and it may be omitted from the form. This is a known UI bug. If your **Customer Name** field is missing, fill out the other two fields and submit the form - the row will still be created. Afterwards, you can return to your model-driven app tab, select **Work Orders**, select the row with the empty name field and **support@southridgevideo.com** email address, and fill in the name there. 
+> [!NOTE] 
+> You may see an error message saying that the **Customer Name** field won't display, and it may be omitted from the form. This is a known UI bug. If your **Customer Name** field is missing, fill out the other two fields and submit the form - the row will still be created. Afterwards, you can return to your model-driven app tab, select **Work Orders**, select the row with the empty name field and **support@southridgevideo.com** email address, and fill in the name there. 
 
 1. Submit the form and confirm the success message appears.
 
@@ -317,6 +317,6 @@ You'll now run through the complete customer journey: submit a Work Order throug
     - The **Request Status** shows **New**
     - The **Estimated Resolution** date is visible
 
-   > [!NOTE] 
-   > If the status hasn't updated yet, refresh the portal preview page. Portal pages pull live data from Dataverse, so changes made in the model-driven app are immediately reflected.
+> [!NOTE] 
+> If the status hasn't updated yet, refresh the portal preview page. Portal pages pull live data from Dataverse, so changes made in the model-driven app are immediately reflected.
    
