@@ -1,4 +1,4 @@
-ï»¿---
+---
 lab:
     title: 'Use AI-powered Plans to design the Contoso Field Services solution'
     description: 'Use Microsoft Power Apps Plans to translate a business need into a structured solution blueprint'
@@ -32,14 +32,14 @@ You've been asked to design an AI-first Power Platform solution that addresses t
 1. In the description box, enter the following description of the business problem:
 
     ```
-    Contoso Field Services needs to manage service requests from business customers whose industrial equipment has failed. When a customer reports an issue, a service request should be created. Service requests should have a priority field â€” Low, Normal, High, and Critical. A service manager needs to view and prioritize all open requests and assign a technician. Requests marked Critical should automatically trigger a manager approval before a technician is assigned. The assigned technician needs a mobile app to view their jobs and update the status. Customers should be able to submit new requests and check the status of existing ones online. When a request is submitted, the assigned technician should receive a notification automatically.
+    Contoso Field Services needs to manage service requests from business customers whose industrial equipment has failed. When a customer reports an issue, a service request should be created. Service requests should have a priority field — Low, Normal, High, and Critical. A service manager needs to view and prioritize all open requests and assign a technician. Requests marked Critical should automatically trigger a manager approval before a technician is assigned. The assigned technician needs a mobile app to view their jobs and update the status. Customers should be able to submit new requests and check the status of existing ones online. When a request is submitted, the assigned technician should receive a notification automatically.
     ```
 
 1. Select **Generate** (or press **Enter**) and wait for Plans to process your description.
 
 ## Task 2: Review the generated solution blueprint
 
-1. Review the **Requirements**. The Requirements Agent summarizes the business problem it understood from your description. Confirm that the key needs are captured â€” service request management, technician assignment, customer portal, notifications, and Critical request approvals.
+1. Review the **Requirements**. The Requirements Agent summarizes the business problem it understood from your description. Confirm that the key needs are captured — service request management, technician assignment, customer portal, notifications, and Critical request approvals.
 
 1. If everything looks correct, select **Looks good.** The Process Agent will now generate the processes.
 
@@ -51,26 +51,26 @@ You've been asked to design an AI-first Power Platform solution that addresses t
 
 1. Review the **Technology** section. This combines apps, automations, and pages into a single view. Confirm that you see references to a canvas app for technicians, a model-driven app for managers, flows for notifications and approvals, and a Power Pages site for external customers. When you're satisfied, select **Looks good.**
 
-   > [!NOTE] 
-   > Plans uses your description to suggest solution components â€” the exact output may vary. What matters is the overall shape of the solution: data â†’ apps â†’ automation â†’ portal. This is the same structure you'll build across Labs 3 through 10.
+> [!NOTE] 
+> Plans uses your description to suggest solution components — the exact output may vary. What matters is the overall shape of the solution: data ? apps ? automation ? portal. This is the same structure you'll build across Labs 3 through 10.
 
 ## Task 3: Review the blueprint as your build guide
 
 Take a few minutes to review the full blueprint and connect it to the exercises ahead.
 
-1. Identify the **tables and columns** Plans recommends â€” you'll create these in Lab 3.
+1. Identify the **tables and columns** Plans recommends — you'll create these in Lab 3.
 
-1. Identify the **canvas app** for field technicians â€” you'll build this in Lab 5.
+1. Identify the **canvas app** for field technicians — you'll build this in Lab 5.
 
-1. Identify the **model-driven app** for service managers â€” you'll build this in Lab 6.
+1. Identify the **model-driven app** for service managers — you'll build this in Lab 6.
 
-1. Identify the **customer portal** â€” you'll create this in Lab 7.
+1. Identify the **customer portal** — you'll create this in Lab 7.
 
-1. Identify the **automated flow** for technician notification â€” you'll build this in Lab 8.
+1. Identify the **automated flow** for technician notification — you'll build this in Lab 8.
 
-1. Identify the **approval flow** for Critical requests â€” you'll build this in Lab 9.
+1. Identify the **approval flow** for Critical requests — you'll build this in Lab 9.
 
-1. Note where AI-generated responses from your Dataverse data could add value for agents â€” you'll build this in Lab 10.
+1. Note where AI-generated responses from your Dataverse data could add value for agents — you'll build this in Lab 10.
 
-   > [!NOTE] 
-   > We won't build on these tables and objects at the moment. Plans was a design tool â€” it helped you understand *what* to build and *why*. In the remaining labs, you'll build each component yourself from scratch, so you understand exactly how everything works. You'll start by creating a new solution in Lab 3.
+> [!NOTE] 
+> We won't build on these tables and objects at the moment. Plans was a design tool — it helped you understand *what* to build and *why*. In the remaining labs, you'll build each component yourself from scratch, so you understand exactly how everything works. You'll start by creating a new solution in Lab 3.

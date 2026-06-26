@@ -32,8 +32,8 @@ Both patterns are useful in different situations. The standalone prompt is flexi
 
 1. In the left navigation, select **AI hub**.
 
-   > [!NOTE]
-   > If you don't see **AI hub**, look for **AI Builder** in the left navigation instead. The entry point may vary depending on your environment.
+> [!NOTE]
+> If you don't see **AI hub**, look for **AI Builder** in the left navigation instead. The entry point may vary depending on your environment.
 
 1. Select **Prompts** from the AI hub menu.
 
@@ -76,8 +76,8 @@ Grounding the prompt in Dataverse data means the AI will base its answers on act
 
 1. Select **Add**.
 
-   > [!NOTE]
-   >  Grounding limits the AI's responses to information from your selected data source. This is critical for accuracy in business scenarios — you want the AI to answer based on Contoso's actual data, not make up plausible-sounding answers.
+> [!NOTE]
+>  Grounding limits the AI's responses to information from your selected data source. This is critical for accuracy in business scenarios — you want the AI to answer based on Contoso's actual data, not make up plausible-sounding answers.
 
 ## Task 4: Add an input variable
 
@@ -95,8 +95,8 @@ Input variables let you pass dynamic values into the prompt at runtime — for e
 
     `Focus your response on Work Orders for the customer named: {CustomerName}`
 
-   > [!NOTE]
-   > The input variable appears as a pill in the instructions panel but is referenced as `{CustomerName}` in the prompt text. At runtime, the value entered by the user replaces this placeholder.
+> [!NOTE]
+> The input variable appears as a pill in the instructions panel but is referenced as `{CustomerName}` in the prompt text. At runtime, the value entered by the user replaces this placeholder.
 
 1. Select **Save**.
 
@@ -108,8 +108,8 @@ Input variables let you pass dynamic values into the prompt at runtime — for e
 
 1. Test with another customer name by selecting the **CustomerName** input pill, changing the sample data to `Northwind Traders`, and selecting **Test** again.
 
-   > [!NOTE]
-   > The quality of grounded responses depends on how much data exists in the table. In a production environment with hundreds of records, the AI's responses become significantly more useful.
+> [!NOTE]
+> The quality of grounded responses depends on how much data exists in the table. In a production environment with hundreds of records, the AI's responses become significantly more useful.
 
 ## Task 6: Configure a row summary for the Work Order table
 
@@ -128,8 +128,8 @@ The standalone prompt you built in Tasks 1–5 is interactive — an agent runs 
     - Request Status
     - Resolved Date
 
-   > [!NOTE]
-   > The row summary uses these fields to generate a concise AI summary whenever Copilot summarizes a Work Order record. Unlike a prompt column, it does not store text on the record — the summary is generated on demand when an agent views the record.
+> [!NOTE]
+> The row summary uses these fields to generate a concise AI summary whenever Copilot summarizes a Work Order record. Unlike a prompt column, it does not store text on the record — the summary is generated on demand when an agent views the record.
 
 1. Select **Test**.
 

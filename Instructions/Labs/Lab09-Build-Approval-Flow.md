@@ -1,4 +1,4 @@
-ï»¿---
+---
 lab:
     title: 'Build a Critical request approval flow for Contoso'
     description: 'Create an approval flow in Microsoft Power Automate that routes Critical priority Work Orders to a service manager before a technician is assigned'
@@ -15,7 +15,7 @@ This exercise should take approximately **30** minutes to complete.
 
 ## Scenario
 
-Contoso's process requires manager approval before a technician can be assigned to any Critical priority Work Order â€” because these incidents affect production systems and carry higher liability. Currently, managers have to monitor the Work Order queue manually and catch Critical requests on their own. There's no automated way to notify them or capture their decision.
+Contoso's process requires manager approval before a technician can be assigned to any Critical priority Work Order — because these incidents affect production systems and carry higher liability. Currently, managers have to monitor the Work Order queue manually and catch Critical requests on their own. There's no automated way to notify them or capture their decision.
 
 You'll build an approval flow that triggers when a Work Order's priority is set to Critical, sends an approval request to the service manager, and updates the request status based on their response.
 
@@ -43,10 +43,10 @@ Before building the condition, you need to find the integer value that Dataverse
 
 1. Under **Schema**, select **Columns** and open the **Priority** column.
 
-1. In the **Choices** section, find the **Critical** option and note the **Value** shown next to it. Write this number down â€” you'll use it in the next task.
+1. In the **Choices** section, find the **Critical** option and note the **Value** shown next to it. Write this number down — you'll use it in the next task.
 
-   > [!NOTE]
-   > Every choice option in Dataverse has a hidden integer value behind its display label. This number is what gets stored in the database and passed to flows, reports, and integrations. Understanding this helps you debug conditions and filters that compare against choice fields.
+> [!NOTE]
+> Every choice option in Dataverse has a hidden integer value behind its display label. This number is what gets stored in the database and passed to flows, reports, and integrations. Understanding this helps you debug conditions and filters that compare against choice fields.
 
 1. Close this tab and return to Power Automate.
 
@@ -62,8 +62,8 @@ Before building the condition, you need to find the integer value that Dataverse
     - **Operator**: is equal to
     - **Value** (right): The integer value you noted in Task 2 (the number may have appeared with commas in the text box, but don't include commas)
 
-   > [!NOTE]
-   > Dataverse stores choice column selections as integers, not text labels. Power Automate receives the integer value when the trigger fires, so your condition must match it exactly.
+> [!NOTE]
+> Dataverse stores choice column selections as integers, not text labels. Power Automate receives the integer value when the trigger fires, so your condition must match it exactly.
 
 ## Task 4: Add the approval action
 
@@ -112,8 +112,8 @@ Now you'll add actions for both the approved and rejected paths.
     - **Row ID**: Type `/` and select **Insert dynamic content**. Search for and select **Work Order** with the description **Unique Identifier for entity instances**.
     - **Request Status**: `Assigned`
 
-   > [!NOTE] 
-   > This signals that the request has been approved and is ready for technician assignment. A more complete solution would also include a step to notify the manager's team that assignment can proceed.
+> [!NOTE] 
+> This signals that the request has been approved and is ready for technician assignment. A more complete solution would also include a step to notify the manager's team that assignment can proceed.
 
 ### If rejected
 
@@ -156,5 +156,5 @@ Now you'll add actions for both the approved and rejected paths.
 
 1. In Power Apps, verify that the **Request Status** of the Work Order has been updated to `Assigned`. (You can refresh the form if you don't see it update immediately.)
 
-   > [!NOTE]
-   > Approval flows pause execution and wait indefinitely for a response. In production, you would typically add a timeout action (using **Run after** settings or a parallel branch with a delay) to handle requests that are never responded to.
+> [!NOTE]
+> Approval flows pause execution and wait indefinitely for a response. In production, you would typically add a timeout action (using **Run after** settings or a parallel branch with a delay) to handle requests that are never responded to.
