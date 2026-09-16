@@ -51,11 +51,13 @@ You will be provided with a **Microsoft 365 license** by your Authorized Lab Hos
 
 1. Sign in using the Microsoft 365 credentials provided by your Authorized Lab Host.
 
-1. If prompted to choose an account type, select **Work or school account**.
+1. If prompted to stay signed in, select **Yes**.
 
-1. Once signed in, look for the **Build apps with Dataverse** section on the home screen. Under that header, find the environment selector and select **Dev One** from the list.
+1. If prompted, select **Get Started** and keep the default country or region settings.
 
-1. If prompted to **Start a free trial** or **Try Power Apps for free**, select it. This activates a 30-day Power Apps Premium trial on your account.
+1. Once signed in, select the Environment selector in the upper-right corner, and then choose **Dev One**.
+
+1. If prompted to **Start a free trial** or **Try Power Apps for free**, select it. This activates a 30-day Power Apps Premium trial on your account. If you don't see this prompt, your trial is already active and you can skip to the next task.
 
 1. When prompted, select your **country/region** and select **Get started**.
 
@@ -87,7 +89,7 @@ Power Pages is a separate product from Power Apps and requires its own trial act
 
 1. If prompted to start a trial, select **Get started** and follow the prompts.
 
-1. Confirm that the Power Pages home screen loads and shows the option to create a new site.
+1. Confirm that the **Create a site** page loads and displays options to create a new site.
 
 > [!NOTE]
 > You don't need to create a site now — just confirm that your trial is active. You'll build the Contoso customer portal in Lab 7.
@@ -96,7 +98,7 @@ Power Pages is a separate product from Power Apps and requires its own trial act
 
 AI Builder is used in Lab 10 to create a grounded prompt that queries Contoso's service history. AI Builder requires credits, which are included with your Power Platform trial.
 
-1. Return to [Power Apps](https://make.powerapps.com) at `https://make.powerapps.com` and confirm you are in the **Dev One** environment.
+1. Return to [**Power Apps**](https://make.powerapps.com) at `https://make.powerapps.com` and confirm you are in the **Dev One** environment.
 
 1. In the left navigation, select **AI hub**.
 
