@@ -36,7 +36,7 @@ You'll create a cloud flow that runs automatically whenever a new Work Order rec
 
 ## Task 2: Configure the Dataverse trigger
 
-1. The trigger step should already be added to the flow canvas. Select it to configure it:
+1. The trigger should already be added to the flow canvas. Select it to configure it:
     - **Change type**: Added
     - **Table name**: Work Orders
     - **Scope**: Organization
@@ -45,11 +45,11 @@ You'll create a cloud flow that runs automatically whenever a new Work Order rec
 
 1. Search for `Get a row by ID` and select **Get a row by ID** under **Microsoft Dataverse**.
 
-1. In the **Get a row by ID** step, configure the following settings:
-    -   **Table name:** Work Orders
-    -   **Row ID:** In **Dynamic content**, search for and select **Work Order**.
+1. In the **Get a row by ID** action, configure the following settings:
+    - **Table name:** Work Orders
+    - **Row ID:** In **Dynamic content**, search for and select **Work Order** from the **When a row is added,modified or deleted** trigger.
 
-1. Select **+** to add the next action underneath it.
+1. Under the **Get a row by ID** action, select **+** to add the next action.
 
 ## Task 3: Add a condition to check for an assigned technician
 
@@ -58,11 +58,11 @@ Not all new Work Orders will have a technician assigned yet — some will be una
 1. Search for and select **Condition** (under Control).
 
 1. Configure the condition:
-    - **Value** (left side): Type `/` and select **Insert dynamic content**. Search for and select **Assigned Technician (Value)**.
+    - **Value** (left side): Type `/` and select **Insert dynamic content**. Search for and select **Assigned Technician (Value)** from the **Get a row by ID** action.
     - **Operator**: is not equal to
     - **Value** (right side): leave blank (empty string)
 
-1. With the condition still selected, open the **Copilot** pane by selecting the Copilot icon in the upper-right corner of the flow designer. Enter the following prompt:
+1. With the condition still selected, open the **Copilot** pane (if it isn't already open) by selecting the Copilot icon in the upper-right corner of the flow designer. Enter the following prompt:
 
     `Explain what this condition does.`
 
@@ -76,21 +76,21 @@ Not all new Work Orders will have a technician assigned yet — some will be una
 
 1. Configure the action:
     - **Table name**: Users
-    - **Row ID**: Type `/` and select **Insert dynamic content**. Search for and select **Assigned Technician (Value)**.
+    - **Row ID**: Type `/` and select **Insert dynamic content**. Search for and select **Assigned Technician (Value)** from the **Get a row by ID** action.
 
-> [!NOTE]
-> This action retrieves the full User record for the assigned technician so you can access their email address in the next step.
+   > **Note:**
+   > This action retrieves the full User record for the assigned technician so you can access their email address in the next step.
 
-1. Select the plus sign below the **Get a row by ID** action to add another action.
+1. In the **True** branch, select the **+** below the **Get a row by ID** action to add another action.
 
-1. Search for and select **Send an email (V2)** (Office 365 Outlook).
+1. Search for and select **Send an email (V2)** from **Office 365 Outlook** connector.
 
-1. When prompted, select **Sign in** and sign in with your Administrator email address provided by your Authorized Lab Host. Accept the permissions. If the sign-in window doesn't appear, check that your pop-up blocker is turned off.
+1. When prompted, select **Sign in** and sign in with your Administrator email address provided by your Authorized Lab Host. If prompted, accept the permissions. If the sign-in window doesn't appear, check that your pop-up blocker is turned off.
 
 1. Configure the email:
-    - **To**: Select the gear icon above the field and select **Use dynamic content**. Then start typing `/` and select **Insert dynamic content.** Search for and select **Primary Email** (from the **Get a row by ID** step).
+    - **To**: Select the gear icon above the field and select **Use dynamic content**. Then start typing `/` and select **Insert dynamic content.** Search for and select **Primary Email** from the **Get a row by ID 1** action.
 
-    - **Subject**: Type `New Work Order Assigned: `, then type `/` and select **Insert dynamic content**. Search for and select **Customer Name**.
+    - **Subject**: Type `New Work Order Assigned: `, then type `/` and select **Insert dynamic content**. Search for and select **Customer Name** from the **Get a row by ID** action.
 
     - **Body**: Build the following message using a mix of text and dynamic content fields:
 
@@ -109,7 +109,9 @@ Not all new Work Orders will have a technician assigned yet — some will be una
         Contoso Field Services
         ```
 
-        For each bracketed placeholder, delete the bracket text, then type `/` and select **Insert dynamic content**. Search for and select the matching field from the Dataverse trigger. For **Priority**, add the following expression: `body('Get_a_row_by_ID')?['contoso_priority@OData.Community.Display.V1.FormattedValue']` to display the priority label instead of the numeric value.
+        For **Customer Name** and **Issue**, delete the bracket text, then type `/` and select **Insert dynamic content**. Search for and select the matching field from the **Get a row by ID** action.
+        
+        For **Priority**, delete the bracket text, type `/`, select **Insert expression**, and add the following expression: `body('Get_a_row_by_ID')?['contoso_priority@OData.Community.Display.V1.FormattedValue']` to display the priority label instead of the numeric value. Select **Add** to add the expression.
 
 1. Select **Save** in the top toolbar.
 
@@ -130,23 +132,23 @@ Not all new Work Orders will have a technician assigned yet — some will be una
 
 1. Select **Save** to save the record.
 
-> [!NOTE]
->  Create the test record through the model-driven app rather than directly in the table editor. The app form ensures the lookup field value is properly committed when the record is saved, so the flow trigger receives a valid Assigned Technician ID. Creating a record directly in the table editor can result in the lookup value not being passed to the trigger correctly.
+   > **Note:**
+   >  Create the test record through the model-driven app rather than directly in the table editor. The app form ensures the lookup field value is properly committed when the record is saved, so the flow trigger receives a valid Assigned Technician ID. Creating a record directly in the table editor can result in the lookup value not being passed to the trigger correctly.
 
 1. Return to Power Automate and check the test results. The flow should have triggered and show a successful run.
 
 1. Open a new browser tab and go to [**Outlook**](https://outlook.office.com) at `https://outlook.office.com`. Sign in with your MOD Administrator email address provided by your Authorized Lab Host and check your inbox for the notification email.
 
-> [!NOTE]
-> If the flow run shows an error, select the failed step to see the error details. Common issues include connection problems (you may need to sign in to the Outlook connector) or dynamic content mapping errors.
+   > **Note:**
+   > If the flow run shows an error, select the failed step to see the error details. Common issues include connection problems (you may need to sign in to the Outlook connector) or dynamic content mapping errors.
 
 ## Task 6: Review the flow run history
 
-1. Close the test panel and select **Back** to return to the flow detail page.
+1. In the flow designer, select **Back** to return to the flow details page.
 
 1. Scroll down to **28 day run history**. You should see the test run listed with a **Succeeded** status.
 
 1. Select the run to see a detailed view of each step, the inputs, and the outputs.
 
-> [!NOTE]
+> **Note:**
 > The run history is your primary debugging tool in Power Automate. Each step shows exactly what data it received and what it returned, making it straightforward to identify where a flow went wrong.
