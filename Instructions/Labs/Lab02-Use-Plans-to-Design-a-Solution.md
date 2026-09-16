@@ -51,7 +51,7 @@ You've been asked to design an AI-first Power Platform solution that addresses t
 
 1. Review the **Technology** section. This combines apps, automations, and pages into a single view. Confirm that you see references to a canvas app for technicians, a model-driven app for managers, flows for notifications and approvals, and a Power Pages site for external customers. When you're satisfied, select **Looks good.**
 
-> [!NOTE] 
+> **Note:**
 > Plans uses your description to suggest solution components — the exact output may vary. What matters is the overall shape of the solution: data ? apps ? automation ? portal. This is the same structure you'll build across Labs 3 through 10.
 
 ## Task 3: Review the blueprint as your build guide
@@ -72,5 +72,5 @@ Take a few minutes to review the full blueprint and connect it to the exercises 
 
 1. Note where AI-generated responses from your Dataverse data could add value for agents — you'll build this in Lab 10.
 
-> [!NOTE] 
+> **Note:**
 > We won't build on these tables and objects at the moment. Plans was a design tool — it helped you understand *what* to build and *why*. In the remaining labs, you'll build each component yourself from scratch, so you understand exactly how everything works. You'll start by creating a new solution in Lab 3.

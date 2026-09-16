@@ -37,7 +37,7 @@ You'll create the agent from inside the model-driven app's designer. This approa
 
 1. You may be prompted to **Start a trial** when Copilot Studio opens. Select it to proceed. You may also be prompted to sign in with your email address. Follow the prompts to complete sign-in before continuing.
 
-> [!NOTE]
+> **Note:**
 > If Copilot Studio gets stuck on a loading screen after sign-in, this is a known UI bug. To work around it:
 > 1. Open [**Power Automate**](https://make.powerautomate.com) in a new browser tab.
 > 1. Look at the URL in the address bar. It will contain a path like `/environments/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/`. Copy the value between `/environments/` and the next `/` — that is your environment ID.
@@ -73,7 +73,7 @@ You'll create the agent from inside the model-driven app's designer. This approa
 
 Grounding connects the agent to your Dataverse data so it can answer questions using real records rather than general knowledge.
 
-> [!IMPORTANT]
+> **Important:**
 > Two prerequisites are required before Dataverse knowledge sources will work:
 > - **Dataverse Search** must be enabled in your environment. If you can't add a Dataverse table in the steps below, ask your administrator to enable Dataverse Search in the Power Platform admin center.
 > - The agent's authentication must be set to **Authenticate with Microsoft**. To verify or set this, in the agent designer, select **Settings**, then **Security**, then **Authentication**, choose **Authenticate with Microsoft**, and select **Save**.
@@ -88,7 +88,7 @@ Grounding connects the agent to your Dataverse data so it can answer questions u
 
 1. Select **Add to agent**. The agent is now grounded on your Work Order data.
 
-> [!NOTE]
+> **Note:**
 > When grounded on a Dataverse table, the agent can retrieve and summarize records using natural language queries. It respects Dataverse security — it only returns records that the signed-in user has permission to see based on their assigned security role.
 
 ## Task 4: Configure suggested prompts
@@ -110,7 +110,7 @@ Suggested prompts appear at the start of a conversation, giving users ready-made
 
 1. Select **Save**.
 
-> [!NOTE]
+> **Note:**
 > Suggested prompts are not visible in the Copilot Studio test panel. They appear on the agent's welcome page only when the agent is deployed to a channel such as Teams or an embedded app. You won't see them during testing in this lab, but they would be ready in a published or deployed agent.
 
 ## Task 5: Create an escalation topic
@@ -129,8 +129,8 @@ Topics let your agent respond to specific phrases with a guided, structured resp
     Trigger this topic when the user wants to escalate a Work Order, mentions a critical issue, or asks for help with an urgent situation that needs immediate attention.
     ```
 
-> [!NOTE]
-> With generative orchestration, you describe the topic's purpose in plain language rather than listing exact phrases. The AI reads this description to decide when to route the conversation to this topic — so a clear, specific description produces more reliable triggering.
+   > **Note:**
+   > With generative orchestration, you describe the topic's purpose in plain language rather than listing exact phrases. The AI reads this description to decide when to route the conversation to this topic — so a clear, specific description produces more reliable triggering.
 
 1. Below the trigger node, select **+** to add a node, then select **Send a message**. Enter the following:
 
@@ -158,7 +158,7 @@ Topics let your agent respond to specific phrases with a guided, structured resp
 
 1. Select **Save** to save the topic.
 
-> [!NOTE]
+> **Note:**
 > Topics take priority over generative answers. When a user sends a message that matches a trigger phrase, the agent follows the topic's defined path rather than generating a free-form response. This makes topics ideal for high-stakes scenarios — like escalations — where you want consistent, predictable behavior.
 
 ## Task 6: Test the agent in Copilot Studio
@@ -175,8 +175,8 @@ Before evaluating, test the agent to confirm it responds correctly — both to W
 
 1. Review the responses. The first three should return data-driven answers from your Work Order table. The last should trigger the **Work Order Escalation** topic and walk through the checklist.
 
-> [!NOTE]
-> If your environment doesn't have any Work Order records yet, create a few test records in the model-driven app from Lab 6 before testing. Use different customers, priorities, and statuses to get useful responses.
+   > **Note:**
+   > If your environment doesn't have any Work Order records yet, create a few test records in the model-driven app from Lab 6 before testing. Use different customers, priorities, and statuses to get useful responses.
 
 1. If responses are inaccurate or overly generic, select the response and use the **Feedback** controls to help improve the agent.
 
@@ -214,8 +214,8 @@ Now you'll create a second agent, a **Plan Comparison Assistant**, grounded on t
     You have access to two sets of data. The [your **Plan** table names] tables represent an AI-generated solution plan created in Lab 2. The Work Order (contoso_workorder) table represents the solution that was actually built during this course. When asked comparison questions, always frame your answers in terms of "what the plan suggested" versus "what was built."
     ```
 
-> [!NOTE]
-> This context is critical. Without it, the agent sees all four tables equally and can't reason about which represents the plan and which represents the built solution.
+   > **Note:**
+   > This context is critical. Without it, the agent sees all four tables equally and can't reason about which represents the plan and which represents the built solution.
 
 1. Select **Save**.
 
@@ -238,7 +238,7 @@ Now you'll create a second agent, a **Plan Comparison Assistant**, grounded on t
 
 1. Review the responses and take notes on what the agent returns for each question. You'll use these observations in Task 9.
 
-> [!NOTE]
+> **Note:**
 > The quality of the agent's responses depends on how much data is in your tables. If the Plan Designer tables are mostly empty, responses will be sparse — which is itself a useful observation about the limits of plan-only data as a knowledge source.
 
 ## Task 9: Reflect and share out
@@ -270,7 +270,7 @@ The Plan Comparison agent can reason about table schemas and data, but a solutio
    - *"If you were starting a real field service project tomorrow, how would you use Plan Designer differently?"*
    - *"What seems easier: creating the model from scratch like we did, or editing components that the Plan Designer created?"*
 
-> [!TIP]
+> **Tip:**
 > AI-assisted planning is a powerful starting point, not a finished blueprint. The gap between what a plan generates and what a real solution requires is exactly where human judgment, domain expertise, and iterative testing add value. You've experienced that gap firsthand across these labs.
 
 ## Verify your work

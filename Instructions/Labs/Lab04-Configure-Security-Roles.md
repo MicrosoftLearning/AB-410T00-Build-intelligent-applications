@@ -96,7 +96,7 @@ Security roles in Dataverse control what records each user can read, create, upd
 
 1. Select **Save + close** from the command bar.
 
-> [!NOTE]
+> **Note:**
 > The **Organization** scope means the user can access all records in the environment, regardless of who created or owns them. The **User** scope limits access to records the user owns or has been explicitly shared with them.
 
 ## Verify your work
